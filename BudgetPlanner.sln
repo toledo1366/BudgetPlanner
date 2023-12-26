@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlanner.Android", "BudgetPlanner\BudgetPlanner.Android.csproj", "{FE43F9E1-5DA5-4E46-BEF6-5EB1B5878E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlanner.Core", "BudgetPlanner.Core\BudgetPlanner.Core.csproj", "{006BB507-63B1-4CE4-823B-AF7F7DF1235B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE43F9E1-5DA5-4E46-BEF6-5EB1B5878E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE43F9E1-5DA5-4E46-BEF6-5EB1B5878E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE43F9E1-5DA5-4E46-BEF6-5EB1B5878E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE43F9E1-5DA5-4E46-BEF6-5EB1B5878E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006BB507-63B1-4CE4-823B-AF7F7DF1235B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006BB507-63B1-4CE4-823B-AF7F7DF1235B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006BB507-63B1-4CE4-823B-AF7F7DF1235B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006BB507-63B1-4CE4-823B-AF7F7DF1235B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {437EB043-0337-41BF-AEAF-EEC9BB2B6B42}
+	EndGlobalSection
+EndGlobal
