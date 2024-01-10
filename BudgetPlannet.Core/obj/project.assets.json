@@ -75,6 +75,23 @@
           }
         }
       },
+      "Plugin.Firebase.Auth.Google/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Auth": "2.0.4",
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Auth.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Auth.Google.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Plugin.Firebase.CloudMessaging/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -196,6 +213,20 @@
             "related": ".xml"
           }
         }
+      },
+      "BudgetPlanner.Auth/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Plugin.Firebase": "2.0.10",
+          "Plugin.Firebase.Auth.Google": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BudgetPlanner.Auth.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BudgetPlanner.Auth.dll": {}
+        }
       }
     }
   },
@@ -283,6 +314,24 @@
         "lib/net6.0/Plugin.Firebase.Auth.xml",
         "plugin.firebase.auth.2.0.6.nupkg.sha512",
         "plugin.firebase.auth.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Auth.Google/2.0.0": {
+      "sha512": "owjNBu3hYR5H89wdupCkhpCuNBSxXOuH2dnIGYHH1mtR0QKbCsgfEXD2FRhNzhLYm6P03mthFvaoiVOmcrQiQg==",
+      "type": "package",
+      "path": "plugin.firebase.auth.google/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Auth.Google.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Auth.Google.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Auth.Google.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Auth.Google.xml",
+        "lib/net6.0/Plugin.Firebase.Auth.Google.dll",
+        "lib/net6.0/Plugin.Firebase.Auth.Google.xml",
+        "plugin.firebase.auth.google.2.0.0.nupkg.sha512",
+        "plugin.firebase.auth.google.nuspec"
       ]
     },
     "Plugin.Firebase.CloudMessaging/2.0.4": {
@@ -428,10 +477,16 @@
         "plugin.firebase.storage.2.0.2.nupkg.sha512",
         "plugin.firebase.storage.nuspec"
       ]
+    },
+    "BudgetPlanner.Auth/1.0.0": {
+      "type": "project",
+      "path": "../BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
+      "msbuildProject": "../BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BudgetPlanner.Auth >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "Plugin.Firebase >= 2.0.10"
     ]
@@ -442,11 +497,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
+      "projectUniqueName": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
       "projectName": "BudgetPlannet.Core",
-      "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
+      "projectPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
       "packagesPath": "/Users/damianszmulik/.nuget/packages/",
-      "outputPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/obj/",
+      "outputPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlannet.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
@@ -461,7 +516,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
+              "projectPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -68,6 +68,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BudgetPlannet.Core\BudgetPlannet.Core.csproj" />
+	  <ProjectReference Include="..\BudgetPlanner.Auth\BudgetPlanner.Auth.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Views\" />

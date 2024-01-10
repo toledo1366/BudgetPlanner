@@ -59,6 +59,23 @@
           }
         }
       },
+      "Plugin.Firebase.Auth.Google/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Auth": "2.0.4",
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Auth.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Auth.Google.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Plugin.Firebase.CloudMessaging/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -238,6 +255,24 @@
         "plugin.firebase.auth.nuspec"
       ]
     },
+    "Plugin.Firebase.Auth.Google/2.0.0": {
+      "sha512": "owjNBu3hYR5H89wdupCkhpCuNBSxXOuH2dnIGYHH1mtR0QKbCsgfEXD2FRhNzhLYm6P03mthFvaoiVOmcrQiQg==",
+      "type": "package",
+      "path": "plugin.firebase.auth.google/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Auth.Google.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Auth.Google.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Auth.Google.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Auth.Google.xml",
+        "lib/net6.0/Plugin.Firebase.Auth.Google.dll",
+        "lib/net6.0/Plugin.Firebase.Auth.Google.xml",
+        "plugin.firebase.auth.google.2.0.0.nupkg.sha512",
+        "plugin.firebase.auth.google.nuspec"
+      ]
+    },
     "Plugin.Firebase.CloudMessaging/2.0.4": {
       "sha512": "lwBbUlFygmy6/LrAyJU9DTSVwfkhg2xERCjXy/JyHY0jup9DerhO1DQ8fIxIN2ktebZ7A1XrLkjUYPfBfxofOA==",
       "type": "package",
@@ -385,7 +420,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Plugin.Firebase >= 2.0.10"
+      "Plugin.Firebase >= 2.0.10",
+      "Plugin.Firebase.Auth.Google >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -394,11 +430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
+      "projectUniqueName": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
       "projectName": "BudgetPlanner.Auth",
-      "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
+      "projectPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
       "packagesPath": "/Users/damianszmulik/.nuget/packages/",
-      "outputPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/obj/",
+      "outputPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
@@ -429,6 +465,10 @@
           "Plugin.Firebase": {
             "target": "Package",
             "version": "[2.0.10, )"
+          },
+          "Plugin.Firebase.Auth.Google": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         },
         "imports": [

@@ -337,3 +337,10 @@ firebaseconfig-21.1.2.aar
 firebasecommonktx-20.4.2.aar
 firebaseauth-22.2.0.aar
 firebaseanalytics-21.3.0.aar
+Plugin.Firebase.Auth.Google.dll
+Xamarin.GooglePlayServices.Auth.Base.dll
+Xamarin.GooglePlayServices.Auth.dll
+play-services-auth-base.aar
+play-services-auth.aar
+playservicesauthbase-18.0.3.aar
+playservicesauth-20.2.0.aar
