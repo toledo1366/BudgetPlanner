@@ -3648,21 +3648,6 @@
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
         }
-      },
-      "BudgetPlannet.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "BudgetPlanner.Auth": "1.0.0",
-          "CommunityToolkit.Mvvm": "8.2.2",
-          "Plugin.Firebase": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        }
       }
     },
     "net7.0-android33.0/android-arm": {
@@ -7305,21 +7290,6 @@
         },
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
-        }
-      },
-      "BudgetPlannet.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "BudgetPlanner.Auth": "1.0.0",
-          "CommunityToolkit.Mvvm": "8.2.2",
-          "Plugin.Firebase": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
         }
       }
     },
@@ -10964,21 +10934,6 @@
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
         }
-      },
-      "BudgetPlannet.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "BudgetPlanner.Auth": "1.0.0",
-          "CommunityToolkit.Mvvm": "8.2.2",
-          "Plugin.Firebase": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        }
       }
     },
     "net7.0-android33.0/android-x64": {
@@ -14622,21 +14577,6 @@
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
         }
-      },
-      "BudgetPlannet.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "BudgetPlanner.Auth": "1.0.0",
-          "CommunityToolkit.Mvvm": "8.2.2",
-          "Plugin.Firebase": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        }
       }
     },
     "net7.0-android33.0/android-x86": {
@@ -18279,21 +18219,6 @@
         },
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
-        }
-      },
-      "BudgetPlannet.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "BudgetPlanner.Auth": "1.0.0",
-          "CommunityToolkit.Mvvm": "8.2.2",
-          "Plugin.Firebase": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BudgetPlannet.Core.dll": {}
         }
       }
     }
@@ -22479,17 +22404,11 @@
       "type": "project",
       "path": "../BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
       "msbuildProject": "../BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
-    },
-    "BudgetPlannet.Core/1.0.0": {
-      "type": "project",
-      "path": "../BudgetPlannet.Core/BudgetPlannet.Core.csproj",
-      "msbuildProject": "../BudgetPlannet.Core/BudgetPlannet.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
       "BudgetPlanner.Auth >= 1.0.0",
-      "BudgetPlannet.Core >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -22499,7 +22418,6 @@
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23211.1",
       "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23211.1",
       "Plugin.Firebase >= 2.0.1",
-      "Plugin.Firebase.Auth.Google >= 2.0.0",
       "Xamarin.Android.Glide >= 4.13.2.2",
       "Xamarin.AndroidX.Browser >= 1.4.0.3",
       "Xamarin.AndroidX.Legacy.Support.V4 >= 1.0.0.15",
@@ -22549,9 +22467,6 @@
           "projectReferences": {
             "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
               "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj"
-            },
-            "E:\\studia\\budgetplanner\\BudgetPlannet.Core\\BudgetPlannet.Core.csproj": {
-              "projectPath": "E:\\studia\\budgetplanner\\BudgetPlannet.Core\\BudgetPlannet.Core.csproj"
             }
           }
         }
@@ -22609,10 +22524,6 @@
           "Plugin.Firebase": {
             "target": "Package",
             "version": "[2.0.1, )"
-          },
-          "Plugin.Firebase.Auth.Google": {
-            "target": "Package",
-            "version": "[2.0.0, )"
           },
           "Xamarin.Android.Glide": {
             "target": "Package",
@@ -22681,52 +22592,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Android.Ref.33",
-            "version": "[33.0.95, 33.0.95]"
-          },
-          {
-            "name": "Microsoft.Android.Runtime.33.android-arm",
-            "version": "[33.0.95, 33.0.95]"
-          },
-          {
-            "name": "Microsoft.Android.Runtime.33.android-arm64",
-            "version": "[33.0.95, 33.0.95]"
-          },
-          {
-            "name": "Microsoft.Android.Runtime.33.android-x64",
-            "version": "[33.0.95, 33.0.95]"
-          },
-          {
-            "name": "Microsoft.Android.Runtime.33.android-x86",
-            "version": "[33.0.95, 33.0.95]"
-          },
-          {
-            "name": "Microsoft.Maui.Controls.Ref.android",
-            "version": "[7.0.101, 7.0.101]"
-          },
-          {
-            "name": "Microsoft.Maui.Controls.Runtime.android",
-            "version": "[7.0.101, 7.0.101]"
-          },
-          {
-            "name": "Microsoft.Maui.Core.Ref.android",
-            "version": "[7.0.101, 7.0.101]"
-          },
-          {
-            "name": "Microsoft.Maui.Core.Runtime.android",
-            "version": "[7.0.101, 7.0.101]"
-          },
-          {
-            "name": "Microsoft.Maui.Essentials.Ref.android",
-            "version": "[7.0.101, 7.0.101]"
-          },
-          {
-            "name": "Microsoft.Maui.Essentials.Runtime.android",
-            "version": "[7.0.101, 7.0.101]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.Android": {
             "privateAssets": "all"
@@ -22744,7 +22609,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

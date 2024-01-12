@@ -1,17 +1,13 @@
-using BudgetPlanner.Auth.Services;
-using BudgetPlannet.Core.ViewModels;
+using BudgetPlanner.UI.ViewModels;
 
 namespace BudgetPlanner.UI.Pages;
 
 public partial class LoginPage : ContentPage
 {
-	private readonly IAuthorizationService _authorizationService;
-
-	public LoginPage(IAuthorizationService authorizationService)
+	public LoginPage()
 	{
-		_authorizationService = authorizationService;
 		InitializeComponent();
 
-		BindingContext = new LoginViewModel(authorizationService);
+		BindingContext = new LoginViewModel();
 	}
 }
