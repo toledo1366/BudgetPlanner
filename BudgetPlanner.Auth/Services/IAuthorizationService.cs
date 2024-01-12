@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 namespace BudgetPlanner.Auth.Services
 {
 	public interface IAuthorizationService
 	{
-		void SignInWithGoogle();
+		Task SignInWithGoogle();
 		void LogoutFromGoogleSource();
     }
 }

@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "/qwwIGlV+LKn9S3YPLANVAIoPe1pjVLP2g+m+Me0Ff7wi4FY10S5bJUUdFzhsX2LE4/IuHxwmThhASsNyvGbVQ==",
+  "dgSpecHash": "Fh64z8vggMMZP0VEPyo4PFvrzlay9dBVCVmMQaLZznurHoHQcWQ8mVRMWYQomvfyQvkMDQGDARt8qG/h7dIKfw==",
   "success": true,
-  "projectFilePath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
+  "projectFilePath": "E:\\studia\\budgetplanner\\BudgetPlannet.Core\\BudgetPlannet.Core.csproj",
   "expectedPackageFiles": [
-    "/Users/damianszmulik/.nuget/packages/communitytoolkit.mvvm/8.2.2/communitytoolkit.mvvm.8.2.2.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase/2.0.10/plugin.firebase.2.0.10.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.analytics/2.0.2/plugin.firebase.analytics.2.0.2.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.auth/2.0.6/plugin.firebase.auth.2.0.6.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.auth.google/2.0.0/plugin.firebase.auth.google.2.0.0.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.cloudmessaging/2.0.4/plugin.firebase.cloudmessaging.2.0.4.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.core/2.0.1/plugin.firebase.core.2.0.1.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.crashlytics/2.0.2/plugin.firebase.crashlytics.2.0.2.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.dynamiclinks/2.0.1/plugin.firebase.dynamiclinks.2.0.1.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.firestore/2.0.5/plugin.firebase.firestore.2.0.5.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.functions/2.0.2/plugin.firebase.functions.2.0.2.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.remoteconfig/2.0.1/plugin.firebase.remoteconfig.2.0.1.nupkg.sha512",
-    "/Users/damianszmulik/.nuget/packages/plugin.firebase.storage/2.0.2/plugin.firebase.storage.2.0.2.nupkg.sha512"
+    "C:\\Users\\damia\\.nuget\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase\\2.0.1\\plugin.firebase.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.analytics\\2.0.1\\plugin.firebase.analytics.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.auth\\2.0.4\\plugin.firebase.auth.2.0.4.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.auth.google\\2.0.0\\plugin.firebase.auth.google.2.0.0.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.cloudmessaging\\2.0.1\\plugin.firebase.cloudmessaging.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.core\\2.0.1\\plugin.firebase.core.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.crashlytics\\2.0.1\\plugin.firebase.crashlytics.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.dynamiclinks\\2.0.1\\plugin.firebase.dynamiclinks.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.firestore\\2.0.1\\plugin.firebase.firestore.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.functions\\2.0.1\\plugin.firebase.functions.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.remoteconfig\\2.0.1\\plugin.firebase.remoteconfig.2.0.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\plugin.firebase.storage\\2.0.1\\plugin.firebase.storage.2.0.1.nupkg.sha512"
   ],
   "logs": []
 }

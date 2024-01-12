@@ -6,16 +6,14 @@ namespace BudgetPlanner.Auth.Services
 {
 	public class AuthorizationService : IAuthorizationService
 	{
-        private readonly IFirebaseAuth _firebaseAuth;
         private readonly IFirebaseAuthGoogle _firebaseAuthGoogle;
 
-        public AuthorizationService(IFirebaseAuth firebaseAuth, IFirebaseAuthGoogle firebaseAuthGoogle)
+        public AuthorizationService(IFirebaseAuthGoogle firebaseAuthGoogle)
 		{
-            _firebaseAuth = firebaseAuth;
             _firebaseAuthGoogle = firebaseAuthGoogle;
 		}
 
-        async void IAuthorizationService.SignInWithGoogle()
+        async Task IAuthorizationService.SignInWithGoogle()
         {
             var user = await _firebaseAuthGoogle.SignInWithGoogleAsync();
             await user.GetIdTokenResultAsync();
