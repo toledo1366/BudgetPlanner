@@ -1,11 +1,14 @@
-﻿namespace BudgetPlanner.UI
+﻿using BudgetPlanner.UI.ViewModels.Main;
+
+namespace BudgetPlanner.UI
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
 
-        public MainPage()
+        public MainPage(MainViewModel vm)
         {
+            BindingContext = vm;
             InitializeComponent();
         }
 
