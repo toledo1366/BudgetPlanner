@@ -1,53 +1,111 @@
 {
   "format": 1,
   "restore": {
-    "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI/BudgetPlanner.UI.csproj": {}
+    "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj": {}
   },
   "projects": {
-    "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI/BudgetPlanner.UI.csproj": {
+    "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
-        "projectName": "BudgetPlanner.UI",
-        "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
-        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
-        "outputPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI/obj/",
+        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+        "projectName": "BudgetPlanner.Auth",
+        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+        "packagesPath": "C:\\Users\\damia\\.nuget",
+        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\obj\\",
         "projectStyle": "PackageReference",
-        "crossTargeting": true,
+        "fallbackFolders": [
+          "D:\\vs\\v3\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-android",
-          "net8.0-ios",
-          "net8.0-maccatalyst"
+          "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-android34.0": {
-            "targetAlias": "net8.0-android",
-            "projectReferences": {
-              "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj": {
-                "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj"
-              }
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Plugin.Firebase": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Plugin.Firebase.Auth.Google": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
-          "net8.0-ios17.0": {
-            "targetAlias": "net8.0-ios",
-            "projectReferences": {
-              "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj": {
-                "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj"
-              }
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
-          "net8.0-maccatalyst17.0": {
-            "targetAlias": "net8.0-maccatalyst",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj",
+        "projectName": "BudgetPlanner.UI",
+        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj",
+        "packagesPath": "C:\\Users\\damia\\.nuget",
+        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "D:\\vs\\v3\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-android"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-android33.0": {
+            "targetAlias": "net7.0-android",
             "projectReferences": {
-              "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj": {
-                "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj"
+              "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
+                "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj"
               }
             }
           }
@@ -59,29 +117,106 @@
         }
       },
       "frameworks": {
-        "net8.0-android34.0": {
-          "targetAlias": "net8.0-android",
+        "net7.0-android33.0": {
+          "targetAlias": "net7.0-android",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "autoReferenced": true
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[7.0.0, )"
             },
-            "Microsoft.Maui.Controls": {
+            "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[7.0.101, )",
+              "autoReferenced": true
             },
-            "Microsoft.Maui.Controls.Compatibility": {
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Plugin.Firebase": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Xamarin.Android.Glide": {
+              "target": "Package",
+              "version": "[4.13.2.2, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Browser": {
+              "target": "Package",
+              "version": "[1.4.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Legacy.Support.V4": {
+              "target": "Package",
+              "version": "[1.0.0.15, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Lifecycle.LiveData": {
+              "target": "Package",
+              "version": "[2.5.1.1, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Navigation.Common": {
+              "target": "Package",
+              "version": "[2.5.2.1, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Navigation.Fragment": {
+              "target": "Package",
+              "version": "[2.5.2.1, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Navigation.Runtime": {
+              "target": "Package",
+              "version": "[2.5.2.1, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Navigation.UI": {
+              "target": "Package",
+              "version": "[2.5.2.1, )",
+              "autoReferenced": true
+            },
+            "Xamarin.AndroidX.Security.SecurityCrypto": {
+              "target": "Package",
+              "version": "[1.1.0-alpha03, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Google.Android.Material": {
+              "target": "Package",
+              "version": "[1.7.0, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Google.Crypto.Tink.Android": {
+              "target": "Package",
+              "version": "[1.7.0.1, )",
               "autoReferenced": true
             }
           },
@@ -100,106 +235,20 @@
             "Microsoft.Android": {
               "privateAssets": "all"
             },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
-        },
-        "net8.0-ios17.0": {
-          "targetAlias": "net8.0-ios",
-          "dependencies": {
-            "CommunityToolkit.Mvvm": {
-              "target": "Package",
-              "version": "[8.2.2, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
             "Microsoft.Maui.Controls": {
-              "target": "Package",
-              "version": "[8.0.3, )"
+              "privateAssets": "all"
             },
-            "Microsoft.Maui.Controls.Compatibility": {
-              "target": "Package",
-              "version": "[8.0.3, )"
+            "Microsoft.Maui.Core": {
+              "privateAssets": "all"
             },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.0, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.iOS": {
+            "Microsoft.Maui.Essentials": {
               "privateAssets": "all"
             },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
-        },
-        "net8.0-maccatalyst17.0": {
-          "targetAlias": "net8.0-maccatalyst",
-          "dependencies": {
-            "CommunityToolkit.Mvvm": {
-              "target": "Package",
-              "version": "[8.2.2, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Maui.Controls": {
-              "target": "Package",
-              "version": "[8.0.3, )"
-            },
-            "Microsoft.Maui.Controls.Compatibility": {
-              "target": "Package",
-              "version": "[8.0.3, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.0, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "xamarinios10",
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.MacCatalyst": {
-              "privateAssets": "all"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -214,76 +263,6 @@
         },
         "android-x86": {
           "#import": []
-        },
-        "iossimulator-arm64": {
-          "#import": []
-        },
-        "maccatalyst-arm64": {
-          "#import": []
-        }
-      }
-    },
-    "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
-        "projectName": "BudgetPlannet.Core",
-        "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/BudgetPlannet.Core.csproj",
-        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
-        "outputPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlannet.Core/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "CommunityToolkit.Mvvm": {
-              "target": "Package",
-              "version": "[8.2.2, )"
-            },
-            "Plugin.Firebase": {
-              "target": "Package",
-              "version": "[2.0.10, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

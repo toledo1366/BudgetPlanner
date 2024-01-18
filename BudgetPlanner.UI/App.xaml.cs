@@ -1,12 +1,12 @@
-﻿namespace BudgetPlanner.UI;
-
-public partial class App : Application
+﻿namespace BudgetPlanner.UI
 {
-	public App()
-	{
-		InitializeComponent();
+    public partial class App : Application
+    {
+        public App(MainPage mainPage)
+        {
+            InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+            MainPage = new NavigationPage(mainPage);
+        }
+    }
 }
-

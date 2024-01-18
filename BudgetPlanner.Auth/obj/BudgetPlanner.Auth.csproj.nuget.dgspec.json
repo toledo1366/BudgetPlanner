@@ -1,31 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {}
+    "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {}
   },
   "projects": {
-    "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
+    "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
+        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
         "projectName": "BudgetPlanner.Auth",
-        "projectPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
-        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
-        "outputPath": "/Users/damianszmulik/Projects/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.Auth/obj/",
+        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+        "packagesPath": "C:\\Users\\damia\\.nuget",
+        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\vs\\v3\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -36,12 +42,16 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Plugin.Firebase": {
               "target": "Package",
-              "version": "[2.0.10, )"
+              "version": "[2.0.1, )"
+            },
+            "Plugin.Firebase.Auth.Google": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
@@ -60,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

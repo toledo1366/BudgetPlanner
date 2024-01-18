@@ -1,10 +1,10 @@
-﻿namespace BudgetPlanner.UI;
-
-public partial class AppShell : Shell
+﻿namespace BudgetPlanner.UI
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
-

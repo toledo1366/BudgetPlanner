@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.8
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlanner.UI", "BudgetPlanner.UI\BudgetPlanner.UI.csproj", "{1EB5F9C8-01B1-4D25-ACCA-83CF3DD86A74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BudgetPlanner.Auth", "BudgetPlanner.Auth\BudgetPlanner.Auth.csproj", "{B04843BE-F08C-4012-BC21-101BB9C3B1D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlannet.Core", "BudgetPlannet.Core\BudgetPlannet.Core.csproj", "{60DAAFAD-70AE-4702-AADF-7E5C478001DA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlanner.Auth", "BudgetPlanner.Auth\BudgetPlanner.Auth.csproj", "{B04843BE-F08C-4012-BC21-101BB9C3B1D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlanner.UI", "BudgetPlanner.UI\BudgetPlanner.UI.csproj", "{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1EB5F9C8-01B1-4D25-ACCA-83CF3DD86A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EB5F9C8-01B1-4D25-ACCA-83CF3DD86A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EB5F9C8-01B1-4D25-ACCA-83CF3DD86A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EB5F9C8-01B1-4D25-ACCA-83CF3DD86A74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60DAAFAD-70AE-4702-AADF-7E5C478001DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60DAAFAD-70AE-4702-AADF-7E5C478001DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60DAAFAD-70AE-4702-AADF-7E5C478001DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60DAAFAD-70AE-4702-AADF-7E5C478001DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B04843BE-F08C-4012-BC21-101BB9C3B1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B04843BE-F08C-4012-BC21-101BB9C3B1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B04843BE-F08C-4012-BC21-101BB9C3B1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B04843BE-F08C-4012-BC21-101BB9C3B1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F83BF01-B08B-48D6-82F7-C35B59D5B8F1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
