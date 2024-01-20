@@ -49,14 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BudgetPlanner.Auth\BudgetPlanner.Auth.csproj" />
+	  <ProjectReference Include="..\BudgetPlanner.Core\BudgetPlanner.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <MauiXaml Update="Pages\ControlPanelPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

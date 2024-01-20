@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using BudgetPlanner.UI.Pages;
+using BudgetPlanner.UI.Services.Navigation;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
@@ -8,12 +10,20 @@ using System.Threading.Tasks;
 
 namespace BudgetPlanner.UI.ViewModels
 {
-    internal partial class LoginViewModel:ObservableObject
+    public partial class LoginViewModel:ObservableObject
     {
+        readonly private INavigationService _navigationService;
+
+        public LoginViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
+
         [RelayCommand]
-        public void BeginLogin()
+        public async Task BeginLogin()
         {
             Console.WriteLine("Logowanie rozpoczęte");
+            await _navigationService.Navigate<ControlPanelPage>();
         }
     }
 }

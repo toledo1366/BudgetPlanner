@@ -3648,6 +3648,19 @@
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
         }
+      },
+      "BudgetPlanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BudgetPlanner.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        }
       }
     },
     "net7.0-android33.0/android-arm": {
@@ -7290,6 +7303,19 @@
         },
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
+        }
+      },
+      "BudgetPlanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BudgetPlanner.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
         }
       }
     },
@@ -10934,6 +10960,19 @@
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
         }
+      },
+      "BudgetPlanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BudgetPlanner.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        }
       }
     },
     "net7.0-android33.0/android-x64": {
@@ -14577,6 +14616,19 @@
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
         }
+      },
+      "BudgetPlanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BudgetPlanner.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        }
       }
     },
     "net7.0-android33.0/android-x86": {
@@ -18219,6 +18271,19 @@
         },
         "runtime": {
           "bin/placeholder/BudgetPlanner.Auth.dll": {}
+        }
+      },
+      "BudgetPlanner.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BudgetPlanner.Auth": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BudgetPlanner.Core.dll": {}
         }
       }
     }
@@ -22404,11 +22469,16 @@
       "type": "project",
       "path": "../BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
       "msbuildProject": "../BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
+    },
+    "BudgetPlanner.Core/1.0.0": {
+      "type": "project",
+      "path": "../BudgetPlanner.Core/BudgetPlanner.Core.csproj",
+      "msbuildProject": "../BudgetPlanner.Core/BudgetPlanner.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
-      "BudgetPlanner.Auth >= 1.0.0",
+      "BudgetPlanner.Core >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -22465,8 +22535,8 @@
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
           "projectReferences": {
-            "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
-              "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj"
+            "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj": {
+              "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj"
             }
           }
         }
