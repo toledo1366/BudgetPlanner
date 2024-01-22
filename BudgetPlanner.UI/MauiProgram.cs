@@ -10,6 +10,8 @@ using Plugin.Firebase.Bundled.Shared;
 using System.Runtime.CompilerServices;
 using Microsoft.Maui.LifecycleEvents;
 using Plugin.Firebase.Bundled.Platforms.Android;
+using BudgetPlanner.UI.ViewModels.Incomes;
+using BudgetPlanner.Core.Services;
 
 namespace BudgetPlanner.UI
 {
@@ -57,6 +59,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<MainViewModel>();
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<ControlPanelViewModel>();
+            builder.Services.AddTransient<IncomesViewModel>();
 
             return builder;
         }
@@ -66,6 +69,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
+            builder.Services.AddTransient<IncomesPage>();
 
             return builder;
         }
@@ -74,6 +78,7 @@ namespace BudgetPlanner.UI
         {
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IServiceProvider, ServiceProvider>();
+            builder.Services.AddSingleton<IGetIncomesService, GetIncomesService>();
 
             return builder;
         }

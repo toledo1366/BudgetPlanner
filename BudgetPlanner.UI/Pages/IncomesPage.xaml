@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetPlanner.UI.Pages.IncomesPage"
+             xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.Incomes"
+             xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
+             x:DataType="vm:IncomesViewModel"
+             Title="IncomesPage">
+    <VerticalStackLayout>
+
+        <ListView 
+            
+            ItemsSource="{Binding items}"
+            SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type models:CashFlow}">
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Price}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
