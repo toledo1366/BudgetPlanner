@@ -1,27 +1,34 @@
 ﻿using System;
-using Plugin.Firebase.Auth;
-using Plugin.Firebase.Auth.Google;
+using Firebase.Auth;
+using Firebase.Auth.Providers;
 
 namespace BudgetPlanner.Auth.Services
 {
 	public class AuthorizationService : IAuthorizationService
 	{
-        private readonly IFirebaseAuthGoogle _firebaseAuthGoogle;
+        private readonly IFirebaseAuthClient _firebaseAuthGoogle;
 
-        public AuthorizationService(IFirebaseAuthGoogle firebaseAuthGoogle)
+        public AuthorizationService(IFirebaseAuthClient firebaseAuthGoogle)
 		{
             _firebaseAuthGoogle = firebaseAuthGoogle;
 		}
 
-        async Task IAuthorizationService.SignInWithGoogle()
+        public async Task<bool> SignIn(string email, string password)
         {
-            var user = await _firebaseAuthGoogle.SignInWithGoogleAsync();
-            await user.GetIdTokenResultAsync();
+            var user = await _firebaseAuthGoogle.SignInWithEmailAndPasswordAsync(email, password);
+            var creds = user.AuthCredential;
+
+            if(creds is null)
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        async void IAuthorizationService.LogoutFromGoogleSource()
+        void IAuthorizationService.LogoutFromGoogleSource()
         {
-            await _firebaseAuthGoogle.SignOutAsync();
+            _firebaseAuthGoogle.SignOut();
         }
     }
 }
