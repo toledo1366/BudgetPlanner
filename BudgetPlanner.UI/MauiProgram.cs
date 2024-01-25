@@ -10,6 +10,7 @@ using Plugin.Firebase.Bundled.Shared;
 using System.Runtime.CompilerServices;
 using Microsoft.Maui.LifecycleEvents;
 using Plugin.Firebase.Bundled.Platforms.Android;
+using BudgetPlanner.Core.Services.Db;
 
 namespace BudgetPlanner.UI
 {
@@ -74,6 +75,7 @@ namespace BudgetPlanner.UI
         {
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IServiceProvider, ServiceProvider>();
+            builder.Services.AddSingleton<IRemoteDatabaseConnectionService, RemoteDatabaseConnectionService>();
 
             return builder;
         }

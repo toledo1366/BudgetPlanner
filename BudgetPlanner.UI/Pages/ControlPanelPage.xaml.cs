@@ -4,10 +4,10 @@ namespace BudgetPlanner.UI.Pages;
 
 public partial class ControlPanelPage : ContentPage
 {
-	public ControlPanelPage()
+	public ControlPanelPage(ControlPanelViewModel vm)
 	{
 		InitializeComponent();
 
-		BindingContext = new ControlPanelViewModel();
+		BindingContext = vm;
 	}
 }

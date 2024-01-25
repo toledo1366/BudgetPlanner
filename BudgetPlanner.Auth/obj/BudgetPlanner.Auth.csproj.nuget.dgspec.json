@@ -1,32 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {}
+    "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {}
   },
   "projects": {
-    "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
+    "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+        "projectUniqueName": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
         "projectName": "BudgetPlanner.Auth",
-        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
-        "packagesPath": "C:\\Users\\damia\\.nuget",
-        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\obj\\",
+        "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
+        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
+        "outputPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\vs\\v3\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }
