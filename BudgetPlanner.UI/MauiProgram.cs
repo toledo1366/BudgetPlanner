@@ -4,13 +4,10 @@ using BudgetPlanner.UI.ViewModels;
 using BudgetPlanner.UI.ViewModels.ControlPanel;
 using BudgetPlanner.UI.ViewModels.Main;
 using Microsoft.Extensions.Logging;
-using Plugin.Firebase.Auth.Google;
-using Plugin.Firebase.Auth;
-using Plugin.Firebase.Bundled.Shared;
-using System.Runtime.CompilerServices;
-using Microsoft.Maui.LifecycleEvents;
-using Plugin.Firebase.Bundled.Platforms.Android;
-using BudgetPlanner.Core.Services.Db;
+using Firebase.Auth;
+using Firebase.Auth.Providers;
+using Firebase.Auth.Repository;
+using BudgetPlanner.Auth.Services;
 
 namespace BudgetPlanner.UI
 {
@@ -21,6 +18,7 @@ namespace BudgetPlanner.UI
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .RegisterFirebase()
                 .RegisterPages()
                 .RegisterCustomServices()
                 .RegisterViewModels()
@@ -39,16 +37,15 @@ namespace BudgetPlanner.UI
 
         private static MauiAppBuilder RegisterFirebase(this MauiAppBuilder builder) 
         {
-            builder.ConfigureLifecycleEvents(events => {
-                events.AddAndroid(android => android.OnCreate((activity, _) => {
-                    var settings = CreateCrossFirebaseSettings();
-                    CrossFirebase.Initialize(activity, settings);
-                    FirebaseAuthGoogleImplementation.Initialize(settings.GoogleRequestIdToken);
-                }));
-            });
-
-            builder.Services.AddSingleton(_ => CrossFirebaseAuth.Current);
-            builder.Services.AddSingleton(_ => CrossFirebaseAuthGoogle.Current);
+            builder.Services.AddSingleton<IFirebaseAuthClient, FirebaseAuthClient>(services => new FirebaseAuthClient(new FirebaseAuthConfig()
+            {
+                ApiKey = "AIzaSyDa4jRyBSw0WnZ7hCyxyID5hKt2PzW5yqI",
+                AuthDomain = "budgetplanner-7ec34.firebaseapp.com",
+                Providers = new Firebase.Auth.Providers.FirebaseAuthProvider[]
+                {
+                    new EmailProvider()
+                },
+            }));
 
             return builder;
         }
@@ -73,25 +70,25 @@ namespace BudgetPlanner.UI
 
         private static MauiAppBuilder RegisterCustomServices(this MauiAppBuilder builder)
         {
+            builder.Services.AddSingleton<IAuthorizationService, AuthorizationService>();
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IServiceProvider, ServiceProvider>();
-            builder.Services.AddSingleton<IRemoteDatabaseConnectionService, RemoteDatabaseConnectionService>();
-
+            
             return builder;
         }
 
-        private static CrossFirebaseSettings CreateCrossFirebaseSettings()
-        {
-            return new CrossFirebaseSettings(
-                isAnalyticsEnabled: true,
-                isAuthEnabled: true,
-                isCloudMessagingEnabled: true,
-                isDynamicLinksEnabled: true,
-                isFirestoreEnabled: true,
-                isFunctionsEnabled: true,
-                isRemoteConfigEnabled: true,
-                isStorageEnabled: true,
-                googleRequestIdToken: "1032501458090-7u266a5uevk6lospp7rvf4rdqdp1o6h6.apps.googleusercontent.com");
-        }
+        //private static CrossFirebaseSettings CreateCrossFirebaseSettings()
+        //{
+        //    return new CrossFirebaseSettings(
+        //        //isAnalyticsEnabled: true,
+        //        isAuthEnabled: true,
+        //        //isCloudMessagingEnabled: true,
+        //        //isDynamicLinksEnabled: true,
+        //        //isFirestoreEnabled: true,
+        //        //isFunctionsEnabled: true,
+        //        //isRemoteConfigEnabled: true,
+        //        //isStorageEnabled: true,
+        //        googleRequestIdToken: "1032501458090-7u266a5uevk6lospp7rvf4rdqdp1o6h6.apps.googleusercontent.com");
+        //}
     }
 }

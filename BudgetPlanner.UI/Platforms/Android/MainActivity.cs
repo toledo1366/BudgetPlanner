@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Plugin.Firebase.Auth.Google;
 
 namespace BudgetPlanner.UI
 {
@@ -12,7 +11,6 @@ namespace BudgetPlanner.UI
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            FirebaseAuthGoogleImplementation.HandleActivityResultAsync(requestCode, resultCode, data);
         }
     }
 }

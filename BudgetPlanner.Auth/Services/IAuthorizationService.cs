@@ -4,8 +4,7 @@ namespace BudgetPlanner.Auth.Services
 {
 	public interface IAuthorizationService
 	{
-		Task SignInWithGoogle();
+		public Task<bool> SignIn(string email, string password);
 		void LogoutFromGoogleSource();
     }
 }
-

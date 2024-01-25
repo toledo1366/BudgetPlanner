@@ -45,12 +45,12 @@
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-		<PackageReference Include="Plugin.Firebase" Version="2.0.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.Runtime" Version="2.5.2.1" />
+		<PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BudgetPlanner.Core\BudgetPlanner.Core.csproj" />
+	  <ProjectReference Include="..\BudgetPlanner.Auth\BudgetPlanner.Auth.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -62,4 +62,10 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="google-services.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>
 </Project>
