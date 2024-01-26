@@ -16,4 +16,13 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\Db\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Db\" />
+  </ItemGroup>
 </Project>

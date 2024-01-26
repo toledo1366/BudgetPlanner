@@ -1,21 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aVLGqW8/aQK1L50UZBQCCaIyfL9rM4xwzO/SrhE7ugsEFhujdoc2gZjr92CT+SKoZtpKhb90a/JDY9t07kxhuA==",
+  "dgSpecHash": "64YWQoGF8BLR8F3Yo7n3VSSbghB3cEtA4q9qnXX1NwRj5/UgdyEF1sE5Q5zACA3lVomQuI0+ZSXfvEvvf9O7gg==",
   "success": true,
-  "projectFilePath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+  "projectFilePath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\damia\\.nuget\\plugin.firebase\\2.0.1\\plugin.firebase.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.analytics\\2.0.1\\plugin.firebase.analytics.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.auth\\2.0.4\\plugin.firebase.auth.2.0.4.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.auth.google\\2.0.0\\plugin.firebase.auth.google.2.0.0.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.cloudmessaging\\2.0.1\\plugin.firebase.cloudmessaging.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.core\\2.0.1\\plugin.firebase.core.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.crashlytics\\2.0.1\\plugin.firebase.crashlytics.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.dynamiclinks\\2.0.1\\plugin.firebase.dynamiclinks.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.firestore\\2.0.1\\plugin.firebase.firestore.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.functions\\2.0.1\\plugin.firebase.functions.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.remoteconfig\\2.0.1\\plugin.firebase.remoteconfig.2.0.1.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\plugin.firebase.storage\\2.0.1\\plugin.firebase.storage.2.0.1.nupkg.sha512"
+    "/Users/damianszmulik/.nuget/packages/firebaseauthentication.net/4.1.0/firebaseauthentication.net.4.1.0.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }

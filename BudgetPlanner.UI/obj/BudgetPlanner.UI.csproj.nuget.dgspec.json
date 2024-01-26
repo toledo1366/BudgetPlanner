@@ -1,32 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj": {}
+    "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj": {}
   },
   "projects": {
-    "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
+    "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+        "projectUniqueName": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
         "projectName": "BudgetPlanner.Auth",
-        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
-        "packagesPath": "C:\\Users\\damia\\.nuget",
-        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\obj\\",
+        "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj",
+        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
+        "outputPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\vs\\v3\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,13 +39,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Plugin.Firebase": {
+            "FirebaseAuthentication.net": {
               "target": "Package",
-              "version": "[2.0.1, )"
-            },
-            "Plugin.Firebase.Auth.Google": {
-              "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[4.1.0, )"
             }
           },
           "imports": [
@@ -70,41 +60,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj": {
+    "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj",
+        "projectUniqueName": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj",
         "projectName": "BudgetPlanner.Core",
-        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj",
-        "packagesPath": "C:\\Users\\damia\\.nuget",
-        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\obj\\",
+        "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj",
+        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
+        "outputPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\vs\\v3\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
-                "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj"
+              "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
+                "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
               }
             }
           }
@@ -118,6 +102,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -134,42 +124,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj": {
+    "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj",
+        "projectUniqueName": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
         "projectName": "BudgetPlanner.UI",
-        "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj",
-        "packagesPath": "C:\\Users\\damia\\.nuget",
-        "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\obj\\",
+        "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
+        "packagesPath": "/Users/damianszmulik/.nuget/packages/",
+        "outputPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.UI/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
-        "fallbackFolders": [
-          "D:\\vs\\v3\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0-android"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-android33.0": {
             "targetAlias": "net7.0-android",
             "projectReferences": {
-              "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj": {
-                "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj"
+              "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
+                "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
+              },
+              "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj": {
+                "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj"
               }
             }
           }
@@ -187,6 +174,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -211,22 +202,6 @@
               "target": "Package",
               "version": "[7.0.101, )",
               "autoReferenced": true
-            },
-            "Microsoft.NET.ILLink.Analyzers": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.100-1.23211.1, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.100-1.23211.1, )",
-              "autoReferenced": true
-            },
-            "Plugin.Firebase": {
-              "target": "Package",
-              "version": "[2.0.1, )"
             },
             "Xamarin.Android.Glide": {
               "target": "Package",
@@ -312,7 +287,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
