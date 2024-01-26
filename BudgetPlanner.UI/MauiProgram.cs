@@ -8,6 +8,7 @@ using Firebase.Auth;
 using Firebase.Auth.Providers;
 using Firebase.Auth.Repository;
 using BudgetPlanner.Auth.Services;
+using BudgetPlanner.Core.Services.Db;
 
 namespace BudgetPlanner.UI
 {
@@ -73,7 +74,8 @@ namespace BudgetPlanner.UI
             builder.Services.AddSingleton<IAuthorizationService, AuthorizationService>();
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IServiceProvider, ServiceProvider>();
-            
+            builder.Services.AddSingleton<IRemoteDatabaseConnectionService, RemoteDatabaseConnectionService>();
+
             return builder;
         }
 

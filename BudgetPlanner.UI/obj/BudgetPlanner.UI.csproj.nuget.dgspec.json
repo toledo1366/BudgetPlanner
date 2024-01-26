@@ -39,13 +39,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Plugin.Firebase": {
+            "FirebaseAuthentication.net": {
               "target": "Package",
-              "version": "[2.0.1, )"
-            },
-            "Plugin.Firebase.Auth.Google": {
-              "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[4.1.0, )"
             }
           },
           "imports": [
@@ -156,6 +152,9 @@
           "net7.0-android33.0": {
             "targetAlias": "net7.0-android",
             "projectReferences": {
+              "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
+                "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
+              },
               "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj": {
                 "projectPath": "/Users/damianszmulik/Desktop/projects/budgetplanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj"
               }
@@ -175,6 +174,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -199,10 +202,6 @@
               "target": "Package",
               "version": "[7.0.101, )",
               "autoReferenced": true
-            },
-            "Plugin.Firebase": {
-              "target": "Package",
-              "version": "[2.0.1, )"
             },
             "Xamarin.Android.Glide": {
               "target": "Package",
@@ -236,7 +235,8 @@
             },
             "Xamarin.AndroidX.Navigation.Runtime": {
               "target": "Package",
-              "version": "[2.5.2.1, )"
+              "version": "[2.5.2.1, )",
+              "autoReferenced": true
             },
             "Xamarin.AndroidX.Navigation.UI": {
               "target": "Package",

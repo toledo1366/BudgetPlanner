@@ -13,7 +13,7 @@ namespace BudgetPlanner.Core.Services.Db
         {
             List<CashFlowDTO> items = new List<CashFlowDTO>();
 
-            var data = await _firebaseClient.Child("cache_flow").OnceAsync<CashFlowDTO>();
+            var data = await _firebaseClient.Child("cash_flow").OnceAsync<CashFlowDTO>();
 
             foreach(var item in data)
             {
@@ -25,7 +25,7 @@ namespace BudgetPlanner.Core.Services.Db
 
         void IRemoteDatabaseConnectionService.PostItem(CashFlowDTO cashFlowDTO)
         {
-            _firebaseClient.Child("cache_flow").PostAsync<CashFlowDTO>(cashFlowDTO);
+            _firebaseClient.Child("cash_flow").PostAsync<CashFlowDTO>(cashFlowDTO);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.budgetplanner.ui" android:versionCode="1" android:versionName="1.0">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true" android:label="BudgetPlanner.UI">
+	<application android:allowBackup="true" android:supportsRtl="true" android:label="BudgetPlanner.UI">
 		<!--		<activity
             android:name="budgetplanner.ui.MainActivity"
             android:label="Budget Planner"

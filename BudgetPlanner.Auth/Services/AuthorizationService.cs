@@ -9,16 +9,16 @@ namespace BudgetPlanner.Auth.Services
         private readonly IFirebaseAuthClient _firebaseAuthGoogle;
 
         public AuthorizationService(IFirebaseAuthClient firebaseAuthGoogle)
-		{
+        {
             _firebaseAuthGoogle = firebaseAuthGoogle;
-		}
+        }
 
         public async Task<bool> SignIn(string email, string password)
         {
             var user = await _firebaseAuthGoogle.SignInWithEmailAndPasswordAsync(email, password);
             var creds = user.AuthCredential;
 
-            if(creds is null)
+            if (creds is null)
             {
                 return false;
             }
