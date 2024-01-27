@@ -9,12 +9,13 @@
     <VerticalStackLayout>
         <ListView
             ItemsSource="{Binding Items}"
+            MinimumHeightRequest="500"
             SelectionMode="Single">
             
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type models:CashFlow}">
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Vertical" MinimumHeightRequest="300" BackgroundColor="Aqua">
                             <Label Text="{Binding Name}"/>
                             <Label Text="{Binding Price}"/>
                             <Label Text="{Binding Date}"/>

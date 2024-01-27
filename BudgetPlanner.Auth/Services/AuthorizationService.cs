@@ -13,10 +13,14 @@ namespace BudgetPlanner.Auth.Services
             _firebaseAuthGoogle = firebaseAuthGoogle;
         }
 
+        private string _uid;
+        public string Uid => _uid;
+
         public async Task<bool> SignIn(string email, string password)
         {
             var user = await _firebaseAuthGoogle.SignInWithEmailAndPasswordAsync(email, password);
             var creds = user.AuthCredential;
+            _uid = user.User.Uid;
 
             if (creds is null)
             {

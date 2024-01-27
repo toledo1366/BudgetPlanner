@@ -9,6 +9,7 @@ using Firebase.Auth.Providers;
 using Firebase.Auth.Repository;
 using BudgetPlanner.Auth.Services;
 using BudgetPlanner.Core.Services.Db;
+using BudgetPlanner.UI.Models.CashFlows;
 
 namespace BudgetPlanner.UI
 {
@@ -23,6 +24,7 @@ namespace BudgetPlanner.UI
                 .RegisterPages()
                 .RegisterCustomServices()
                 .RegisterViewModels()
+                .RegisterMappers()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -65,6 +67,13 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
+
+            return builder;
+        }
+
+        private static MauiAppBuilder RegisterMappers(this MauiAppBuilder builder)
+        {
+            builder.Services.AddSingleton<CashFlowMapper>();
 
             return builder;
         }
