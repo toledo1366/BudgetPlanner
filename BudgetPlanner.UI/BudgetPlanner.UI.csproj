@@ -54,6 +54,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\CashFlowForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ControlPanelPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
