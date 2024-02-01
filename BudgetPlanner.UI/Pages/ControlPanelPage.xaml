@@ -6,28 +6,36 @@
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
-    <VerticalStackLayout>
+    <AbsoluteLayout>
         <ListView
             ItemsSource="{Binding Items}"
-            MinimumHeightRequest="500"
-            SelectionMode="Single">
-            
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type models:CashFlow}">
-                    <ViewCell>
-                        <StackLayout Orientation="Vertical" MinimumHeightRequest="300" BackgroundColor="Aqua">
-                            <Label Text="{Binding Name}"/>
-                            <Label Text="{Binding Price}"/>
-                            <Label Text="{Binding Date}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+            HasUnevenRows="True"
+            SeparatorVisibility="None">
+
+             <ListView.ItemTemplate>
+                 <DataTemplate x:DataType="{x:Type models:CashFlow}">
+                     <ViewCell>
+                        <Frame CornerRadius="10" Margin="10">
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding Price}"/>
+                                <Label Text="{Binding Date}"/>
+                            </StackLayout>
+                        </Frame>
+                     </ViewCell>
+                 </DataTemplate>
+             </ListView.ItemTemplate>
         </ListView>
+
+        <ImageButton
+            HeightRequest="60"
+            WidthRequest="60"
+            BackgroundColor="Green"
+            CornerRadius="30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,80" />
+    </AbsoluteLayout>
+
         
-        <Button
-            Text="Dodaj"
-            Command="{Binding AddEntityCommand}"
-            Margin="10"/>
-    </VerticalStackLayout>
+    
 </ContentPage>

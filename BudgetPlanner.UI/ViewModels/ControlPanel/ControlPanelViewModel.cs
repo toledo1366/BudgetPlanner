@@ -48,8 +48,6 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         [RelayCommand]
         private void AddEntity()
         {
-            Console.WriteLine("Przycisk działa.");
-
             CashFlowDTO xxx = new CashFlowDTO
             {
                 Name = "Opłaty",
@@ -59,8 +57,6 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
             };
 
             _remoteDatabaseConnectionService.PostItem(xxx);
-
-            //_remoteDatabaseConnectionService.GetItems();
         }
     }
 }

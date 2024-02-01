@@ -6,8 +6,8 @@ using Firebase.Database.Query;
 
 namespace BudgetPlanner.Core.Services.Db
 {
-	public class RemoteDatabaseConnectionService:IRemoteDatabaseConnectionService
-	{
+    public class RemoteDatabaseConnectionService : IRemoteDatabaseConnectionService
+    {
         readonly private FirebaseClient _firebaseClient = new FirebaseClient("https://budgetplanner-7ec34-default-rtdb.europe-west1.firebasedatabase.app/");
         readonly private IAuthorizationService _authorizationService;
 
@@ -23,7 +23,7 @@ namespace BudgetPlanner.Core.Services.Db
 
             var data = await _firebaseClient.Child($"{user}/cash_flow").OnceAsync<CashFlowDTO>();
 
-            foreach(var item in data)
+            foreach (var item in data)
             {
                 items.Add(item.Object);
             }
@@ -35,7 +35,7 @@ namespace BudgetPlanner.Core.Services.Db
         {
             string user = _authorizationService.Uid;
 
-            _firebaseClient.Child($"{user}/cash_flow").PostAsync<CashFlowDTO>(cashFlowDTO);
+            _firebaseClient.Child($"{user}/cash_flow").PostAsync(cashFlowDTO);
         }
     }
 }

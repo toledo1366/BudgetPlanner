@@ -13201,44 +13201,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\damia\\.nuget": {},
-    "D:\\vs\\v3\\NuGetPackages": {}
+    "/Users/damianszmulik/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj",
+      "projectUniqueName": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
       "projectName": "BudgetPlanner.UI",
-      "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\BudgetPlanner.UI.csproj",
-      "packagesPath": "C:\\Users\\damia\\.nuget",
-      "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.UI\\obj\\",
+      "projectPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
+      "packagesPath": "/Users/damianszmulik/.nuget/packages/",
+      "outputPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.UI/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
-      "fallbackFolders": [
-        "D:\\vs\\v3\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/damianszmulik/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0-android"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
           "projectReferences": {
-            "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj": {
-              "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj"
+            "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj": {
+              "projectPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Auth/BudgetPlanner.Auth.csproj"
             },
-            "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj": {
-              "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Core\\BudgetPlanner.Core.csproj"
+            "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj": {
+              "projectPath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.Core/BudgetPlanner.Core.csproj"
             }
           }
         }
@@ -13381,7 +13374,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
