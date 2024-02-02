@@ -60,6 +60,9 @@
 	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\RegisterFormPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,5 +70,10 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Pages\RegisterFormPage.xaml.cs">
+	    <DependentUpon>RegisterFormPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 </Project>

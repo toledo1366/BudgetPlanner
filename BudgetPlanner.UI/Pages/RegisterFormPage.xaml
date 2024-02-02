@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetPlanner.UI.Pages.RegisterFormPage"
+             NavigationPage.HasNavigationBar="false"
+             xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.RegisterForm"
+             x:DataType="vm:RegisterFromViewModel">
+    
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Entry
+    Text="{Binding UserName, Mode=TwoWay}"
+    WidthRequest="250.0"
+    Margin="10.0"
+    Placeholder="Nazwa użytkownika"/>
+        <Entry
+    Text="{Binding Email, Mode=TwoWay}"
+    WidthRequest="250.0"
+    Margin="10.0"
+    Placeholder="Adres email"/>
+        <Entry
+     Text="{Binding Password, Mode=TwoWay}"
+     IsPassword="True"
+     WidthRequest="250.0"
+     Margin="10.0"
+     Placeholder="Hasło"/>
+        <Entry
+     Text="{Binding RepeatedPassword, Mode=TwoWay}"
+     IsPassword="True"
+     WidthRequest="250.0"
+     Margin="10.0"
+     Placeholder="Powtórz hasło"/>
+        <Button
+    Text="Zarejestruj się"
+    Command="{Binding RegisterCommand}"
+    WidthRequest="250.0"
+    Margin="40.0"/>
+
+    </VerticalStackLayout>
+</ContentPage>
