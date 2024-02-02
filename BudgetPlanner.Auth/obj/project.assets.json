@@ -87,23 +87,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\damia\\.nuget": {},
-    "D:\\vs\\v3\\NuGetPackages": {}
+    "C:\\Users\\kamil\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+      "projectUniqueName": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Projekt\\BudgetPlanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
       "projectName": "BudgetPlanner.Auth",
-      "projectPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
-      "packagesPath": "C:\\Users\\damia\\.nuget",
-      "outputPath": "E:\\studia\\budgetplanner\\BudgetPlanner.Auth\\obj\\",
+      "projectPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Projekt\\BudgetPlanner\\BudgetPlanner.Auth\\BudgetPlanner.Auth.csproj",
+      "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Projekt\\BudgetPlanner\\BudgetPlanner.Auth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\vs\\v3\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -152,7 +152,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
