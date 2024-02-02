@@ -50,6 +50,28 @@ namespace BudgetPlanner.UI.ViewModels.RegisterForm
         public async Task Register()
         {
             bool passwordsAreSame = CheckIfPasswordsAreSame();
+            if (passwordsAreSame) 
+            {
+                _authorizationService.AccountRegistration(UserName, Email, Password);           
+            }
+        }
+        bool IsValidEmail(string email)
+        {
+            var trimmedEmail = email.Trim();
+
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

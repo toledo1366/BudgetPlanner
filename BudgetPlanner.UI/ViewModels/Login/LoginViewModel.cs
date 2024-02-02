@@ -52,6 +52,5 @@ namespace BudgetPlanner.UI.ViewModels
         }
         [RelayCommand]
         public async Task NavigateToRegistration() => await _navigationService.Navigate<RegisterFormPage>();
-
     }
 }
