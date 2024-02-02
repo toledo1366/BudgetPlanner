@@ -2,6 +2,7 @@
 using Android.Webkit;
 using BudgetPlanner.Core.Models.CashFlows;
 using BudgetPlanner.Core.Services.Db;
+using BudgetPlanner.UI.Helpers;
 using BudgetPlanner.UI.Models.CashFlows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -21,7 +22,7 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         readonly private CashFlowMapper _cashFlowMapper;
 
         [ObservableProperty]
-        public ObservableCollection<CashFlow> items;
+        public List<CashFlow> items;
 
         public ControlPanelViewModel(IRemoteDatabaseConnectionService remoteDatabaseConnectionService, CashFlowMapper cashFlowMapper)
         {
@@ -34,29 +35,19 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
 
         async Task FetchItems()
         {
-            Items = new ObservableCollection<CashFlow>();
+            Items = new List<CashFlow>();
             var result = await _remoteDatabaseConnectionService.GetItems();
+            List<CashFlow> sortedItems = new List<CashFlow>();
 
             foreach (var item in result)
             {
                 CashFlow cashFlow = _cashFlowMapper.FromDto(item);
-                Items.Add(cashFlow);
+                sortedItems.Add(cashFlow);
             }
-        }
 
+            sortedItems = ListExtensions.SortCashFlowsDescending(sortedItems);
 
-        [RelayCommand]
-        private void AddEntity()
-        {
-            CashFlowDTO xxx = new CashFlowDTO
-            {
-                Name = "Opłaty",
-                Price = 9.99,
-                Date = DateTime.Now.ToLongDateString(),
-                CashFlowType = 2
-            };
-
-            _remoteDatabaseConnectionService.PostItem(xxx);
+            Items = sortedItems;
         }
     }
 }

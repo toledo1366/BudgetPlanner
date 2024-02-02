@@ -6,36 +6,33 @@
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
-    <AbsoluteLayout>
-        <ListView
-            ItemsSource="{Binding Items}"
-            HasUnevenRows="True"
-            SeparatorVisibility="None">
-
-             <ListView.ItemTemplate>
-                 <DataTemplate x:DataType="{x:Type models:CashFlow}">
-                     <ViewCell>
-                        <Frame CornerRadius="10" Margin="10">
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Name}"/>
-                                <Label Text="{Binding Price}"/>
-                                <Label Text="{Binding Date}"/>
-                            </StackLayout>
-                        </Frame>
-                     </ViewCell>
-                 </DataTemplate>
-             </ListView.ItemTemplate>
-        </ListView>
-
+    <Grid Padding="10">
+        <ScrollView>
+            <ListView
+                ItemsSource="{Binding Items}"
+                HasUnevenRows="True"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type models:CashFlow}">
+                        <ViewCell>
+                           <Frame CornerRadius="10" Margin="10">
+                               <StackLayout Padding="10">
+                                   <Label Text="{Binding Name}"/>
+                                   <Label Text="{Binding Price}"/>
+                                   <Label Text="{Binding Date}"/>
+                               </StackLayout>
+                           </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
         <ImageButton
-            HeightRequest="60"
-            WidthRequest="60"
-            BackgroundColor="Green"
-            CornerRadius="30"
-            AbsoluteLayout.LayoutFlags="PositionProportional"  
-            AbsoluteLayout.LayoutBounds=".95,.95,80,80" />
-    </AbsoluteLayout>
-
-        
-    
+            Source="plus.svg"
+            HeightRequest="70"
+            WidthRequest="70"
+            Margin="0, 0, 15, 15"
+            HorizontalOptions="End"
+            VerticalOptions="End"/>
+    </Grid>
 </ContentPage>

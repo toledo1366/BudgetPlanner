@@ -64,8 +64,12 @@
 
 	<ItemGroup>
 	  <None Remove="google-services.json" />
+	  <None Remove="Helpers\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Helpers\" />
 	</ItemGroup>
 </Project>
