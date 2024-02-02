@@ -1,19 +1,14 @@
-﻿using BudgetPlanner.Auth.Services;
+﻿
+
+using BudgetPlanner.Auth.Services;
 using BudgetPlanner.UI.Pages;
 using BudgetPlanner.UI.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BudgetPlanner.UI.ViewModels
 {
-    public partial class LoginViewModel:ObservableObject
+    public partial class LoginViewModel : ObservableObject
     {
         readonly private INavigationService _navigationService;
         readonly private IAuthorizationService _authorizationService;
@@ -55,5 +50,7 @@ namespace BudgetPlanner.UI.ViewModels
                 Password = string.Empty;
             }
         }
+        [RelayCommand]
+        public async Task NavigateToRegistration() => await _navigationService.Navigate<RegisterFormPage>();
     }
 }

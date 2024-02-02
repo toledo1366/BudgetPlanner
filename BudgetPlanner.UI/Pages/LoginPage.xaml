@@ -21,6 +21,11 @@
             Command="{Binding BeginLoginCommand}"
             WidthRequest="250.0"
             Margin="10.0"/>
+        <Button
+            Text="Zarejestruj się"
+            Command="{Binding NavigateToRegistrationCommand}"
+            WidthRequest="250.0"
+            Margin="10.0"/>
         <Label
             Text="{Binding ErrorMessage}"
             IsVisible="{Binding ErrorMessageVisible}"

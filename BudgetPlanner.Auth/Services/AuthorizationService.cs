@@ -34,6 +34,17 @@ namespace BudgetPlanner.Auth.Services
         {
             _firebaseAuthGoogle.SignOut();
         }
+
+        async void IAuthorizationService.AccountRegistration(string username, string email, string password)
+        {
+            try
+            {
+                await _firebaseAuthGoogle.CreateUserWithEmailAndPasswordAsync(email, password,username);
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
 
