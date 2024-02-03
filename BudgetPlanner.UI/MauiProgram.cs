@@ -20,9 +20,7 @@ namespace BudgetPlanner.UI
         {
             Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
             {
-#if ANDROID
-                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Black);
-#endif
+                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
             });
 
             var builder = MauiApp.CreateBuilder();
