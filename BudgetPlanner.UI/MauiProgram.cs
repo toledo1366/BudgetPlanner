@@ -18,10 +18,7 @@ namespace BudgetPlanner.UI
     {
         public static MauiApp CreateMauiApp()
         {
-            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
-            {
-                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
-            });
+            ConfigureUiHandlers();
 
             var builder = MauiApp.CreateBuilder();
             builder
@@ -95,6 +92,14 @@ namespace BudgetPlanner.UI
             builder.Services.AddSingleton<IRemoteDatabaseConnectionService, RemoteDatabaseConnectionService>();
 
             return builder;
+        }
+
+        private static void ConfigureUiHandlers()
+        {
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
+            {
+                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            });
         }
     }
 }
