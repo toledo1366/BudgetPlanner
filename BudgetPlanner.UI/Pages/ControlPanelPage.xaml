@@ -11,6 +11,7 @@
             <ListView
                 ItemsSource="{Binding Items}"
                 HasUnevenRows="True"
+                IsVisible="{Binding IsListVisible}"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:CashFlow}">
@@ -22,11 +23,14 @@
                                    <Label Text="{Binding Date}"/>
                                </StackLayout>
                            </Frame>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
+        <Label Text="Brak środków na koncie"
+               IsVisible="{Binding IsErrorVisible}"/>
         <ImageButton
             Source="plus.svg"
             HeightRequest="70"
