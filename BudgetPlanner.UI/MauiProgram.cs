@@ -10,6 +10,7 @@ using Firebase.Auth.Repository;
 using BudgetPlanner.Auth.Services;
 using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Models.CashFlows;
+using BudgetPlanner.UI.ViewModels.RegisterForm;
 using BudgetPlanner.UI.ViewModels.CashFlowForm;
 
 namespace BudgetPlanner.UI
@@ -59,6 +60,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<MainViewModel>();
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<ControlPanelViewModel>();
+            builder.Services.AddTransient<RegisterFromViewModel>();
             builder.Services.AddTransient<CashFlowFormViewModel>();
 
             return builder;
@@ -69,6 +71,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
+            builder.Services.AddTransient<RegisterFormPage>();
             builder.Services.AddTransient<CashFlowForm>();
 
             return builder;

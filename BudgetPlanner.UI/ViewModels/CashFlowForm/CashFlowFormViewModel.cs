@@ -17,13 +17,15 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
         readonly private INavigationService _navigationService;
 
         [ObservableProperty]
-        public string name;
+        private string name;
 
         [ObservableProperty]
         private DateTime date;
 
         [ObservableProperty]
         private double amount;
+
+
 
         public CashFlowFormViewModel(INavigationService navigationService)
         {
@@ -46,7 +48,7 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
                 CashFlowType = 2
             };
 
-            _remoteDatabaseConnectionService.PostItem(xxx);
+            // _remoteDatabaseConnectionService.PostItem(xxx);
 
             //_remoteDatabaseConnectionService.GetItems();
         }
