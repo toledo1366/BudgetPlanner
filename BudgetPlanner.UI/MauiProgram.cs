@@ -18,6 +18,13 @@ namespace BudgetPlanner.UI
     {
         public static MauiApp CreateMauiApp()
         {
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
+            {
+#if ANDROID
+                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Black);
+#endif
+            });
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
@@ -61,6 +68,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<ControlPanelViewModel>();
             builder.Services.AddTransient<RegisterFromViewModel>();
+
             return builder;
         }
 
@@ -70,6 +78,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
             builder.Services.AddTransient<RegisterFormPage>();
+
             return builder;
         }
 
@@ -89,19 +98,5 @@ namespace BudgetPlanner.UI
 
             return builder;
         }
-
-        //private static CrossFirebaseSettings CreateCrossFirebaseSettings()
-        //{
-        //    return new CrossFirebaseSettings(
-        //        //isAnalyticsEnabled: true,
-        //        isAuthEnabled: true,
-        //        //isCloudMessagingEnabled: true,
-        //        //isDynamicLinksEnabled: true,
-        //        //isFirestoreEnabled: true,
-        //        //isFunctionsEnabled: true,
-        //        //isRemoteConfigEnabled: true,
-        //        //isStorageEnabled: true,
-        //        googleRequestIdToken: "1032501458090-7u266a5uevk6lospp7rvf4rdqdp1o6h6.apps.googleusercontent.com");
-        //}
     }
 }

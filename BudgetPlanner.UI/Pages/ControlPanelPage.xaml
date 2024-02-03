@@ -15,13 +15,13 @@
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:CashFlow}">
                         <ViewCell>
-                           <Frame CornerRadius="10" Margin="10">
-                               <StackLayout Padding="10">
-                                   <Label Text="{Binding Name}"/>
-                                   <Label Text="{Binding Price}"/>
-                                   <Label Text="{Binding Date}"/>
-                               </StackLayout>
-                           </Frame>
+                            <Frame CornerRadius="10" Margin="10">
+                                <StackLayout Padding="10">
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Price}"/>
+                                    <Label Text="{Binding Date}"/>
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

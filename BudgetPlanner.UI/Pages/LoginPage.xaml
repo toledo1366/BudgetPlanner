@@ -14,12 +14,14 @@
         <Entry
             Text="{Binding Email, Mode=TwoWay}"
             WidthRequest="250.0"
-            Margin="10.0"/>
+            Margin="10.0"
+            Placeholder="Email"/>
         <Entry
             Text="{Binding Password, Mode=TwoWay}"
             IsPassword="True"
             WidthRequest="250.0"
-            Margin="10.0"/>
+            Margin="10.0"
+            Placeholder="Hasło"/>
         <Button
             Text="Login"
             Command="{Binding BeginLoginCommand}"
