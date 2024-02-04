@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T91bhbD/QGO+gNrP+2O4l48Vxjdi9E4TUMpmB2JAD5lS6hSYR+f3IpIvIM+XZWD5KTF1zW5XPXCoE/hLJ14/pg==",
+  "dgSpecHash": "egi5KP+7Fo4qfVFfFbd8bKivBVlQZhr4oIBT4zR0eA5tdSD6lTAH/KiA9nGibCy0edKYCqw5NyepCUrZm55aDQ==",
   "success": true,
   "projectFilePath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,14 @@
     "/Users/damianszmulik/.nuget/packages/microsoft.net.illink.analyzers/7.0.100-1.23211.1/microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/microsoft.net.illink.tasks/7.0.100-1.23211.1/microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp/2.88.6/skiasharp.2.88.6.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.extended/2.0.0-preview.86/skiasharp.extended.2.0.0-preview.86.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.extended.ui.maui/2.0.0-preview.86/skiasharp.extended.ui.maui.2.0.0-preview.86.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.nativeassets.android/2.88.6/skiasharp.nativeassets.android.2.88.6.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.skottie/2.88.6/skiasharp.skottie.2.88.6.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.views/2.88.6/skiasharp.views.2.88.6.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.views.maui.controls/2.88.6/skiasharp.views.maui.controls.2.88.6.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/skiasharp.views.maui.core/2.88.6/skiasharp.views.maui.core.2.88.6.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/system.reactive/4.0.0/system.reactive.4.0.0.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/system.reflection.typeextensions/4.3.0/system.reflection.typeextensions.4.3.0.nupkg.sha512",
