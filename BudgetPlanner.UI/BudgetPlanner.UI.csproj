@@ -62,6 +62,7 @@
 	<ItemGroup>
 		<None Remove="google-services.json" />
 		<None Remove="Helpers\" />
+		<None Remove="Resources\Raw\lottie.json" />
 		<None Remove="Resources\Splash\" />
 		<None Remove="Resources\Images\angle-right.svg" />
 		<None Remove="Resources\Images\angle-left.svg" />
