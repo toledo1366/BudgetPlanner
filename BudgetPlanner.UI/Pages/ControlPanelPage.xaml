@@ -6,27 +6,104 @@
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
-    <Grid Padding="10">
-        <ScrollView>
+    <Grid
+        Padding="10">
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+    
+        <HorizontalStackLayout
+            Grid.Row="1"
+            VerticalOptions="Start"
+            HorizontalOptions="Center">
+
+            <Border
+                WidthRequest="35"
+                HeightRequest="35"
+                Stroke="Black"
+                Padding="15, 0, 0, 0"
+                StrokeThickness="1">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+                <ImageButton
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Margin="0, 0, 15, 0"
+                    Source="angle_left.svg"
+                    IsVisible="{Binding IsPreviousButtonVisible}"
+                    Command="{Binding GetPreviousMonthCommand}"/>
+                </Border>
+            
+
+            <DatePicker
+                Format="MM.yyyy"
+                Date="{Binding CurrentDate}"
+                IsEnabled="False"
+                TextColor="Black"
+                FontSize="Title"
+                Margin="10, 0, 10, 0"/>
+
+            <Border
+                WidthRequest="35"
+                HeightRequest="35"
+                Stroke="Black"
+                Padding="0, 0, 15, 0"
+                IsVisible="{Binding IsNextButtonVisible}"
+                StrokeThickness="1">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+                <ImageButton
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Margin="15, 0, 0, 0"
+                    Source="angle_right.svg"
+                    Command="{Binding GetNextMonthCommand}"/>
+                </Border>
+
+        </HorizontalStackLayout>
+    
+        <ScrollView
+            Grid.Row="2"
+            Margin="0,75,0,0">
+    
             <ListView
                 ItemsSource="{Binding Items}"
                 HasUnevenRows="True"
                 SeparatorVisibility="None">
+    
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:CashFlow}">
                         <ViewCell>
-                            <Frame CornerRadius="10" Margin="10">
-                                <StackLayout Padding="10">
+                            <Border  
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                Margin="10">
+
+                                 <Border.StrokeShape>
+                                      <RoundRectangle CornerRadius="15"/>
+                                 </Border.StrokeShape>
+
+                                 <StackLayout Padding="10">
                                     <Label Text="{Binding Name}"/>
                                     <Label Text="{Binding Price}"/>
                                     <Label Text="{Binding Date}"/>
-                                </StackLayout>
-                            </Frame>
+                            </StackLayout>
+                            </Border>
+
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+    
             </ListView>
+    
         </ScrollView>
+    
         <ImageButton
             Source="plus.svg"
             HeightRequest="70"
