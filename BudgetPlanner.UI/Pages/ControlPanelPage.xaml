@@ -6,27 +6,67 @@
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
-    <Grid Padding="10">
-        <ScrollView>
+    <Grid
+        Padding="10">
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+    
+        <HorizontalStackLayout
+            Grid.Row="1"
+            VerticalOptions="Start"
+            HorizontalOptions="Center">
+
+            <Button
+                IsVisible="{Binding IsPreviousButtonVisible}"
+                Command="{Binding GetPreviousMonthCommand}"/>
+
+            <DatePicker
+                Format="MM.yyyy"
+                Date="{Binding CurrentDate}"
+                FontSize="Title"
+                Margin="10, 0, 10, 0"/>
+
+            <Button
+                IsVisible="{Binding IsNextButtonVisible}"
+                Command="{Binding GetNextMonthCommand}"/>
+
+        </HorizontalStackLayout>
+    
+        <ScrollView
+            Grid.Row="2"
+            Margin="0,75,0,0">
+    
             <ListView
                 ItemsSource="{Binding Items}"
                 HasUnevenRows="True"
                 SeparatorVisibility="None">
+    
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:CashFlow}">
                         <ViewCell>
-                            <Frame CornerRadius="10" Margin="10">
+                            <!--<Frame CornerRadius="10" Margin="10">
                                 <StackLayout Padding="10">
                                     <Label Text="{Binding Name}"/>
                                     <Label Text="{Binding Price}"/>
                                     <Label Text="{Binding Date}"/>
                                 </StackLayout>
-                            </Frame>
+                            </Frame>-->
+
+                            <StackLayout Padding="10">
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Price}"/>
+                                    <Label Text="{Binding Date}"/>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+    
             </ListView>
+    
         </ScrollView>
+    
         <ImageButton
             Source="plus.svg"
             HeightRequest="70"
