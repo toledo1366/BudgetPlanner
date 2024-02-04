@@ -11,6 +11,7 @@ using BudgetPlanner.Auth.Services;
 using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Models.CashFlows;
 using BudgetPlanner.UI.ViewModels.RegisterForm;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace BudgetPlanner.UI
 {
@@ -23,6 +24,7 @@ namespace BudgetPlanner.UI
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp()
                 .RegisterFirebase()
                 .RegisterPages()
                 .RegisterCustomServices()

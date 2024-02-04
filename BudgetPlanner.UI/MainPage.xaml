@@ -4,25 +4,14 @@
              NavigationPage.HasNavigationBar="false"
              x:Class="BudgetPlanner.UI.MainPage"
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.Main"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              x:DataType="vm:MainViewModel">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            VerticalOptions="Center">
-
-            <Image
-                Source="logo.png"
-                Margin="10"
-                />
-
-            <Label
-                Text="Budget Planner"
-                FontSize="40"
-                FontAttributes="Bold"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+    <skia:SKLottieView
+        Source="lottie.json"
+        RepeatCount="-1"
+        HeightRequest="200"
+        WidthRequest="200"
+        HorizontalOptions="Center" />
 
 </ContentPage>
