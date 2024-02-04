@@ -18,19 +18,52 @@
             VerticalOptions="Start"
             HorizontalOptions="Center">
 
-            <Button
-                IsVisible="{Binding IsPreviousButtonVisible}"
-                Command="{Binding GetPreviousMonthCommand}"/>
+            <Border
+                WidthRequest="35"
+                HeightRequest="35"
+                Stroke="Black"
+                Padding="15, 0, 0, 0"
+                StrokeThickness="1">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+                <ImageButton
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Margin="0, 0, 15, 0"
+                    Source="angle_left.svg"
+                    IsVisible="{Binding IsPreviousButtonVisible}"
+                    Command="{Binding GetPreviousMonthCommand}"/>
+                </Border>
+            
 
             <DatePicker
                 Format="MM.yyyy"
                 Date="{Binding CurrentDate}"
+                IsEnabled="False"
+                TextColor="Black"
                 FontSize="Title"
                 Margin="10, 0, 10, 0"/>
 
-            <Button
+            <Border
+                WidthRequest="35"
+                HeightRequest="35"
+                Stroke="Black"
+                Padding="0, 0, 15, 0"
                 IsVisible="{Binding IsNextButtonVisible}"
-                Command="{Binding GetNextMonthCommand}"/>
+                StrokeThickness="1">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+                <ImageButton
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Margin="15, 0, 0, 0"
+                    Source="angle_right.svg"
+                    Command="{Binding GetNextMonthCommand}"/>
+                </Border>
 
         </HorizontalStackLayout>
     
@@ -46,19 +79,23 @@
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:CashFlow}">
                         <ViewCell>
-                            <!--<Frame CornerRadius="10" Margin="10">
-                                <StackLayout Padding="10">
-                                    <Label Text="{Binding Name}"/>
-                                    <Label Text="{Binding Price}"/>
-                                    <Label Text="{Binding Date}"/>
-                                </StackLayout>
-                            </Frame>-->
+                            <Border  
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                Margin="10">
 
-                            <StackLayout Padding="10">
+                                 <Border.StrokeShape>
+                                      <RoundRectangle CornerRadius="15"/>
+                                 </Border.StrokeShape>
+
+                                 <StackLayout Padding="10">
                                     <Label Text="{Binding Name}"/>
                                     <Label Text="{Binding Price}"/>
                                     <Label Text="{Binding Date}"/>
                             </StackLayout>
+                            </Border>
+
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
