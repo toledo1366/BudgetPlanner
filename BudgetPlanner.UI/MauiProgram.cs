@@ -6,12 +6,12 @@ using BudgetPlanner.UI.ViewModels.Main;
 using Microsoft.Extensions.Logging;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
-using Firebase.Auth.Repository;
 using BudgetPlanner.Auth.Services;
 using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Models.CashFlows;
 using BudgetPlanner.UI.ViewModels.RegisterForm;
 using SkiaSharp.Views.Maui.Controls.Hosting;
+using Microsoft.Maui.Handlers;
 
 namespace BudgetPlanner.UI
 {
@@ -50,7 +50,7 @@ namespace BudgetPlanner.UI
             {
                 ApiKey = "AIzaSyDa4jRyBSw0WnZ7hCyxyID5hKt2PzW5yqI",
                 AuthDomain = "budgetplanner-7ec34.firebaseapp.com",
-                Providers = new Firebase.Auth.Providers.FirebaseAuthProvider[]
+                Providers = new FirebaseAuthProvider[]
                 {
                     new EmailProvider()
                 },
@@ -98,7 +98,7 @@ namespace BudgetPlanner.UI
 
         private static void ConfigureUiHandlers()
         {
-            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
+            EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
             {
                 handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
             });

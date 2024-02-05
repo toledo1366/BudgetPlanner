@@ -40,6 +40,7 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
+		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -66,6 +67,7 @@
 		<None Remove="Resources\Splash\" />
 		<None Remove="Resources\Images\angle-right.svg" />
 		<None Remove="Resources\Images\angle-left.svg" />
+		<None Remove="Resources\Splash\logo.png" />
 	</ItemGroup>
 	<ItemGroup>
 		<GoogleServicesJson Include="google-services.json" />
@@ -75,5 +77,8 @@
 		<Compile Update="Pages\RegisterFormPage.xaml.cs">
 			<DependentUpon>RegisterFormPage.xaml</DependentUpon>
 		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiSplashScreen Include="Resources\Splash\logo.png" Color="#ffffff" BaseSize="277,252" />
 	</ItemGroup>
 </Project>

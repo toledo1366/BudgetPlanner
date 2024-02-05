@@ -41,10 +41,26 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
             _cashFlowMapper = cashFlowMapper;
 
             CurrentDate = DateTime.Today;
-            IsNextButtonVisible = false;
-            IsPreviousButtonVisible = true;
 
-            Task.Run(async() => await FetchItems());
+            Task.Run(async() =>
+            {
+                await FetchItems();
+                UpdateNavigationButtonsState();
+            });
+        }
+
+        private void UpdateNavigationButtonsState()
+        {
+            if(CurrentDate.Month == _bufor.Last().Date.Month)
+            {
+                IsPreviousButtonVisible = false;
+            }
+
+            if (CurrentDate.Month == DateTime.Now.Month)
+            {
+                IsPreviousButtonVisible = true;
+                IsNextButtonVisible = false;
+            }
         }
 
         async Task FetchItems()
@@ -74,6 +90,7 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
             IsNextButtonVisible = true;
 
             SortCashFlowsByDate();
+            UpdateNavigationButtonsState();
         }
 
         [RelayCommand]
@@ -87,6 +104,7 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
             }
 
             SortCashFlowsByDate();
+            UpdateNavigationButtonsState();
         }
 
         private void SortCashFlowsByDate()
