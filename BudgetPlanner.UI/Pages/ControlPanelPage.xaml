@@ -6,6 +6,7 @@
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
+
     <Grid
         Padding="10">
     
@@ -23,11 +24,13 @@
                 HeightRequest="35"
                 Stroke="Black"
                 Padding="15, 0, 0, 0"
+                IsVisible="{Binding IsPreviousButtonVisible}"
                 StrokeThickness="1">
 
                 <Border.StrokeShape>
                      <RoundRectangle CornerRadius="360"/>
                 </Border.StrokeShape>
+
                 <ImageButton
                     HeightRequest="20"
                     WidthRequest="20"
@@ -57,6 +60,7 @@
                 <Border.StrokeShape>
                      <RoundRectangle CornerRadius="360"/>
                 </Border.StrokeShape>
+
                 <ImageButton
                     HeightRequest="20"
                     WidthRequest="20"
@@ -92,10 +96,9 @@
                                     <Label Text="{Binding Name}"/>
                                     <Label Text="{Binding Price}"/>
                                     <Label Text="{Binding Date}"/>
-                            </StackLayout>
+                                </StackLayout>
                             </Border>
 
-                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
