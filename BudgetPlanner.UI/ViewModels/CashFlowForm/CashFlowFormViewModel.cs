@@ -1,5 +1,6 @@
 ﻿using Android.Accounts;
 using BudgetPlanner.Core.Models.CashFlows;
+using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -15,6 +16,7 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
     public partial class CashFlowFormViewModel:ObservableObject
     {
         readonly private INavigationService _navigationService;
+        readonly private IRemoteDatabaseConnectionService _remoteDatabaseConnectionService;
 
         [ObservableProperty]
         private string name;
@@ -27,11 +29,11 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
 
 
 
-        public CashFlowFormViewModel(INavigationService navigationService)
+        public CashFlowFormViewModel(INavigationService navigationService, IRemoteDatabaseConnectionService remoteDatabaseConnectionService)
         {
             
             _navigationService = navigationService;
-
+            _remoteDatabaseConnectionService = remoteDatabaseConnectionService;
           
         }
 
@@ -48,7 +50,7 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
                 CashFlowType = 2
             };
 
-            // _remoteDatabaseConnectionService.PostItem(xxx);
+            _remoteDatabaseConnectionService.PostItem(xxx);
 
             //_remoteDatabaseConnectionService.GetItems();
         }
