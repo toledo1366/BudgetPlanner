@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BudgetPlanner.UI.Pages;
 using static AndroidX.Concurrent.Futures.CallbackToFutureAdapter;
 
 namespace BudgetPlanner.UI.Services.Navigation
@@ -11,7 +12,7 @@ namespace BudgetPlanner.UI.Services.Navigation
     {
         readonly IServiceProvider _serviceProvider;
 
-        protected INavigation Navigation {
+        public INavigation Navigation {
             get
             {
                 INavigation navigation = Application.Current?.MainPage?.Navigation;
@@ -37,23 +38,7 @@ namespace BudgetPlanner.UI.Services.Navigation
             }
             catch (InvalidOperationException ex)
             {
-                Console.WriteLine(ex.Message);  //TODO Change it to some Logger service later.
-            }
-
-            return navigation;
-        }
-
-        public async Task<Page> NavigateBack()
-        {
-            Page navigation = null;
-
-            try
-            {
-                navigation = await Navigation.PopAsync();
-            }
-            catch (Exception ex)
-            {
-
+                Console.WriteLine(ex.Message); 
             }
 
             return navigation;

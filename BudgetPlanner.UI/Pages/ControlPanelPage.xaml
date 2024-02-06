@@ -96,7 +96,7 @@
 
                                  <StackLayout Padding="10">
                                     <Label Text="{Binding Name}"/>
-                                    <Label Text="{Binding Price}"/>
+                                    <Label Text="{Binding Price}" TextColor="{Binding Color}"/>
                                     <Label Text="{Binding Date}"/>
                                 </StackLayout>
                             </Border>
@@ -109,12 +109,12 @@
     
         </ScrollView>
         <Label Text="Brak środków na koncie"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Title"
                IsVisible="{Binding IsErrorVisible}"/>
-        <ImageButton
-            Source="plus.svg"
-            HeightRequest="70"
-            WidthRequest="70"
-            Margin="0, 0, 15, 15"
+
+        <VerticalStackLayout
             HorizontalOptions="End"
             VerticalOptions="End">
 
@@ -134,10 +134,9 @@
                 <ImageButton
                     Source="expense.png"
                     HeightRequest="30"
-                    WidthRequest="30"/>
+                    WidthRequest="30"
+                    Command="{Binding NavigateToFormAddExpenseCommand}"/>
             </Border>
-
-
 
             <Border
                 WidthRequest="55"
@@ -156,6 +155,7 @@
                     Source="income.png"
                     HeightRequest="30"
                     WidthRequest="30"
+                    Command="{Binding NavigateToFormAddIncomeCommand}"
                     />
             </Border>
     

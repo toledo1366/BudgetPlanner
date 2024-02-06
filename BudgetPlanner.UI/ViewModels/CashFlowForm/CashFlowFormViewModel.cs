@@ -1,6 +1,8 @@
 ﻿using Android.Accounts;
 using BudgetPlanner.Core.Models.CashFlows;
 using BudgetPlanner.Core.Services.Db;
+using BudgetPlanner.UI.Models.CashFlows;
+using BudgetPlanner.UI.Pages;
 using BudgetPlanner.UI.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -27,32 +29,65 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
         [ObservableProperty]
         private double amount;
 
+        [ObservableProperty]
+        public CashFlowType cashFlowType;
 
+        [ObservableProperty]
+        public string title;
 
-        public CashFlowFormViewModel(INavigationService navigationService, IRemoteDatabaseConnectionService remoteDatabaseConnectionService)
+        [ObservableProperty]
+        public List<string> categories;
+
+        [ObservableProperty]
+        public string selectedCategory;
+
+        public CashFlowFormViewModel(INavigationService navigationService, IRemoteDatabaseConnectionService remoteDatabaseConnectionService, CashFlowType type)
         {
-            
             _navigationService = navigationService;
             _remoteDatabaseConnectionService = remoteDatabaseConnectionService;
-          
+
+            CashFlowType = type;
+            Categories = new List<string>();
+
+            if(type == CashFlowType.Koszty)
+            {
+                foreach(int category in Enum.GetValues(typeof(ExpenseCategory)))
+                {
+                    var enumItem = Enum.GetName(typeof(ExpenseCategory), category);
+                    Categories.Add(enumItem);
+                }
+            }
+            else
+            {
+                foreach (int category in Enum.GetValues(typeof(IncomeCategory)))
+                {
+                    var enumItem = Enum.GetName(typeof(IncomeCategory), category);
+                    Categories.Add(enumItem);
+                }
+            }
+
+            Title = CashFlowType == CashFlowType.Koszty ? "Dodaj koszt" : "Dodaj przychód";
+            Date = DateTime.Today;
         }
 
         [RelayCommand]
         private void AddEntity()
         {
-            Console.WriteLine("Przycisk działa.");
+            int categoryIndex = Categories.IndexOf(SelectedCategory);
 
-            CashFlowDTO xxx = new CashFlowDTO
+            CashFlowDTO cashFlow = new CashFlowDTO
             {
-                Name = "Opłaty",
-                Price = 9.99,
-                Date = DateTime.Now.ToLongDateString(),
-                CashFlowType = 2
+                Name = Name,
+                Price = Amount,
+                Date = Date.ToString(),
+                CashFlowType = (int)CashFlowType,
+                IncomeCategory = CashFlowType == CashFlowType.Przychody ? categoryIndex : null,
+                ExpenseCategory = CashFlowType == CashFlowType.Koszty ? categoryIndex : null,
             };
 
-            _remoteDatabaseConnectionService.PostItem(xxx);
+            _remoteDatabaseConnectionService.PostItem(cashFlow);
 
-            //_remoteDatabaseConnectionService.GetItems();
+            _navigationService.Navigate<ControlPanelPage>();
         }
     }
 

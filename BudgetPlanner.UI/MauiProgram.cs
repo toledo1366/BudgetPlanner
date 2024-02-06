@@ -77,7 +77,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
             builder.Services.AddTransient<RegisterFormPage>();
-            builder.Services.AddTransient<CashFlowForm>();
+            builder.Services.AddTransient<CashFlowFormPage>();
 
             return builder;
         }

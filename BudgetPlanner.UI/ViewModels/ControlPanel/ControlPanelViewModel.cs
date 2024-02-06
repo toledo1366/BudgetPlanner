@@ -4,6 +4,8 @@ using BudgetPlanner.Core.Models.CashFlows;
 using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Helpers;
 using BudgetPlanner.UI.Models.CashFlows;
+using BudgetPlanner.UI.Pages;
+using BudgetPlanner.UI.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
@@ -18,6 +20,7 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
 {
     public partial class ControlPanelViewModel : ObservableObject
     {
+        readonly private INavigationService _navigationService;
         readonly private IRemoteDatabaseConnectionService _remoteDatabaseConnectionService;
         readonly private CashFlowMapper _cashFlowMapper;
 
@@ -44,8 +47,9 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         [ObservableProperty]
         public bool isErrorVisible;
 
-        public ControlPanelViewModel(IRemoteDatabaseConnectionService remoteDatabaseConnectionService, CashFlowMapper cashFlowMapper)
+        public ControlPanelViewModel(INavigationService navigationService, IRemoteDatabaseConnectionService remoteDatabaseConnectionService, CashFlowMapper cashFlowMapper)
         {
+            _navigationService = navigationService;
             _remoteDatabaseConnectionService = remoteDatabaseConnectionService;
             _cashFlowMapper = cashFlowMapper;
 
@@ -65,13 +69,16 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
             if(CurrentDate.Month == _bufor.Last().Date.Month)
             {
                 IsPreviousButtonVisible = false;
-            }
-
-            if (CurrentDate.Month == DateTime.Now.Month)
+            } else
             {
                 IsPreviousButtonVisible = true;
-                IsNextButtonVisible = false;
             }
+
+            //if (CurrentDate.Month == DateTime.Now.Month)
+            //{
+            //    IsPreviousButtonVisible = true;
+            //    IsNextButtonVisible = false;
+            //}
         }
 
         async Task FetchItems()
@@ -92,6 +99,9 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
 
             _bufor.ForEach(Items.Add);
             SortCashFlowsByDate();
+
+            IsErrorVisible = !_bufor.Any() ? true : false;
+            IsListVisible = _bufor.Any() ? true : false;
         }
 
         [RelayCommand]
@@ -122,6 +132,23 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         public void OpenCashFlowTypeSelector()
         {
             AreAddButtonsVisible = !AreAddButtonsVisible;
+        }
+
+        [RelayCommand]
+        public void NavigateToFormAddIncome()
+        {
+            NavigateToForm(CashFlowType.Przychody);
+        }
+
+        [RelayCommand]
+        public void NavigateToFormAddExpense()
+        {
+            NavigateToForm(CashFlowType.Koszty);
+        }
+
+        private void NavigateToForm(CashFlowType cashFlowType)
+        {
+            _navigationService.Navigation.PushAsync(new CashFlowFormPage(new CashFlowForm.CashFlowFormViewModel(_navigationService, _remoteDatabaseConnectionService, cashFlowType)));
         }
 
         private void SortCashFlowsByDate()
