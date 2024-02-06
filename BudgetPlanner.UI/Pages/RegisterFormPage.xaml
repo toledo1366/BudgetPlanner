@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BudgetPlanner.UI.Pages.RegisterFormPage"
-             NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasNavigationBar="True"
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.RegisterForm"
-             x:DataType="vm:RegisterFromViewModel">
+             x:DataType="vm:RegisterFromViewModel"
+             Shell.BackgroundColor="White"
+             NavigationPage.IconColor="Black">
     
     <VerticalStackLayout
         HorizontalOptions="Center"
@@ -12,30 +14,35 @@
         <Entry
     Text="{Binding UserName, Mode=TwoWay}"
     WidthRequest="250.0"
-    Margin="10.0"
+    Margin="0, 15, 0, 0"
     Placeholder="Nazwa użytkownika"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
         <Entry
     Text="{Binding Email, Mode=TwoWay}"
     WidthRequest="250.0"
-    Margin="10.0"
+    Margin="0, 15, 0, 0"
     Placeholder="Adres email"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
         <Entry
      Text="{Binding Password, Mode=TwoWay}"
      IsPassword="True"
      WidthRequest="250.0"
-     Margin="10.0"
+     Margin="0, 15, 0, 0"
      Placeholder="Hasło"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
         <Entry
      Text="{Binding RepeatedPassword, Mode=TwoWay}"
      IsPassword="True"
      WidthRequest="250.0"
-     Margin="10.0"
+     Margin="0, 15, 0, 0"
      Placeholder="Powtórz hasło"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
         <Button
-    Text="Zarejestruj się"
-    Command="{Binding RegisterCommand}"
-    WidthRequest="250.0"
-    Margin="40.0"/>
+            Text="Zarejestruj się"
+            Command="{Binding RegisterCommand}"
+            WidthRequest="250.0"
+            Margin="60.0"
+            Background="Black"/>
 
     </VerticalStackLayout>
 </ContentPage>
