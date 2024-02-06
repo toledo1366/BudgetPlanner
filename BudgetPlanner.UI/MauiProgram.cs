@@ -10,6 +10,7 @@ using BudgetPlanner.Auth.Services;
 using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Models.CashFlows;
 using BudgetPlanner.UI.ViewModels.RegisterForm;
+using BudgetPlanner.UI.ViewModels.CashFlowForm;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 using Microsoft.Maui.Handlers;
 
@@ -65,6 +66,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<ControlPanelViewModel>();
             builder.Services.AddTransient<RegisterFromViewModel>();
+            builder.Services.AddTransient<CashFlowFormViewModel>();
 
             return builder;
         }
@@ -75,6 +77,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
             builder.Services.AddTransient<RegisterFormPage>();
+            builder.Services.AddTransient<CashFlowForm>();
 
             return builder;
         }
