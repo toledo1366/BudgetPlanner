@@ -35,7 +35,7 @@
                     HeightRequest="20"
                     WidthRequest="20"
                     Margin="0, 0, 15, 0"
-                    Source="angle_left.svg"
+                    Source="angle_left.png"
                     IsVisible="{Binding IsPreviousButtonVisible}"
                     Command="{Binding GetPreviousMonthCommand}"/>
                 </Border>
@@ -65,7 +65,7 @@
                     HeightRequest="20"
                     WidthRequest="20"
                     Margin="15, 0, 0, 0"
-                    Source="angle_right.svg"
+                    Source="angle_right.png"
                     Command="{Binding GetNextMonthCommand}"/>
                 </Border>
 
@@ -77,6 +77,7 @@
     
             <ListView
                 ItemsSource="{Binding Items}"
+                SelectionMode="None"
                 HasUnevenRows="True"
                 SeparatorVisibility="None">
     
@@ -106,13 +107,59 @@
             </ListView>
     
         </ScrollView>
-    
-        <ImageButton
-            Source="plus.svg"
-            HeightRequest="70"
-            WidthRequest="70"
-            Margin="0, 0, 15, 15"
+
+        <VerticalStackLayout
             HorizontalOptions="End"
-            VerticalOptions="End"/>
+            VerticalOptions="End">
+
+            <Border
+                WidthRequest="55"
+                HeightRequest="55"
+                Stroke="Black"
+                BackgroundColor="White"
+                IsVisible="{Binding AreAddButtonsVisible}"
+                StrokeThickness="1"
+                Margin="0, 0, 15, 10">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+
+                <ImageButton
+                    Source="expense.png"
+                    HeightRequest="30"
+                    WidthRequest="30"/>
+            </Border>
+
+
+
+            <Border
+                WidthRequest="55"
+                HeightRequest="55"
+                Stroke="Black"
+                BackgroundColor="White"
+                IsVisible="{Binding AreAddButtonsVisible}"
+                StrokeThickness="1"
+                Margin="0, 0, 15, 10">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+
+                <ImageButton
+                    Source="income.png"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    />
+            </Border>
+    
+            <ImageButton
+                Source="plus.png"
+                HeightRequest="70"
+                WidthRequest="70"
+                Margin="0, 0, 15, 15"
+                Command="{Binding OpenCashFlowTypeSelectorCommand}"/>
+
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>

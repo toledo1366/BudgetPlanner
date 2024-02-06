@@ -42,5 +42,21 @@ namespace BudgetPlanner.UI.Services.Navigation
 
             return navigation;
         }
+
+        public async Task<Page> NavigateBack()
+        {
+            Page navigation = null;
+
+            try
+            {
+                navigation = await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return navigation;
+        }
     }
 }

@@ -35,6 +35,9 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         [ObservableProperty]
         private bool isPreviousButtonVisible;
 
+        [ObservableProperty]
+        private bool areAddButtonsVisible;
+
         public ControlPanelViewModel(IRemoteDatabaseConnectionService remoteDatabaseConnectionService, CashFlowMapper cashFlowMapper)
         {
             _remoteDatabaseConnectionService = remoteDatabaseConnectionService;
@@ -47,6 +50,8 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
                 await FetchItems();
                 UpdateNavigationButtonsState();
             });
+
+            AreAddButtonsVisible = false;
         }
 
         private void UpdateNavigationButtonsState()
@@ -105,6 +110,12 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
 
             SortCashFlowsByDate();
             UpdateNavigationButtonsState();
+        }
+
+        [RelayCommand]
+        public void OpenCashFlowTypeSelector()
+        {
+            AreAddButtonsVisible = !AreAddButtonsVisible;
         }
 
         private void SortCashFlowsByDate()

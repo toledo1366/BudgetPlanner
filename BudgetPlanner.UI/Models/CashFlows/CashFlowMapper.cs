@@ -17,6 +17,7 @@ namespace BudgetPlanner.UI.Models.CashFlows
                 Price = dto.Price,
                 Date = DateTime.Parse(dto.Date),
                 CashFlowType = (CashFlowType)dto.CashFlowType,
+                Color = (CashFlowType)dto.CashFlowType == CashFlowType.Przychody ? "#00ff00" : "#ff0000",
             };
         }
         

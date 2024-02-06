@@ -29,8 +29,8 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#ffffff" />
 
 		<!-- Splash Screen -->
-		<!--		<MauiImage Include="Resources\Images\*" />
-		<MauiFont Include="Resources\Fonts\*" />-->
+				<MauiImage Include="Resources\Images\*" />
+		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
@@ -65,8 +65,7 @@
 		<None Remove="Helpers\" />
 		<None Remove="Resources\Raw\lottie.json" />
 		<None Remove="Resources\Splash\" />
-		<None Remove="Resources\Images\angle-right.svg" />
-		<None Remove="Resources\Images\angle-left.svg" />
+		<None Remove="Resources\Images\*" />
 		<None Remove="Resources\Splash\logo.png" />
 	</ItemGroup>
 	<ItemGroup>
