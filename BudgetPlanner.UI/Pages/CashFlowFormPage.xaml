@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetPlanner.UI.Pages.CashFlowFormPage"
+             xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.CashFlowForm"
+             x:DataType="vm:CashFlowFormViewModel"
+             NavigationPage.IconColor="Black">
+
+    <VerticalStackLayout
+        VerticalOptions="Center">
+
+        <Label
+            Text="{Binding Title}"
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Margin="0, 10, 0, 100"/>
+
+        <Entry
+            Text="{Binding Name, Mode=TwoWay}"
+            Margin="0, 15, 0, 0"
+            WidthRequest="250.0"
+            Placeholder="Nazwa przepływu"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
+
+        <Label
+            Text="{Binding Date}"
+            Margin="70, 35, 0, 0"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
+
+        <Entry
+            Text="{Binding Amount, Mode=TwoWay}"
+            Margin="0, 15, 0, 0"
+            Keyboard="Numeric"
+            WidthRequest="250.0"
+            Placeholder="Wprowadź kwotę"/>
+        <BoxView HeightRequest="1" Color="Black" WidthRequest="250"/>
+
+        <Picker
+            Title="Wybierz kategorie"
+            Margin="0, 15, 0, 0"
+            ItemsSource="{Binding Categories}"
+            SelectedItem="{Binding SelectedCategory}"
+            WidthRequest="260.0"/>
+
+        <Button
+            Text="Dodaj"
+            Margin="0, 50, 0, 50"
+            Command="{Binding AddEntityCommand}"
+            WidthRequest="250.0"
+            BorderColor="Black"
+            BorderWidth="1"
+            Background="Transparent"
+            TextColor="Black"/>
+
+    </VerticalStackLayout>
+</ContentPage>

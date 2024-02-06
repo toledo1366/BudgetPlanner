@@ -9,5 +9,6 @@ namespace BudgetPlanner.UI.Services.Navigation
     public interface INavigationService
     {
         Task Navigate<T>();
+        INavigation Navigation { get; }
     }
 }

@@ -14,7 +14,7 @@ namespace BudgetPlanner.UI.Models.CashFlows
         public CashFlowType CashFlowType { get; set; }
         public IncomeCategory? IncomeCategory { get; set; }
         public ExpenseCategory? ExpenseCategory { get; set; }
-        public string Color { get; set; }
+        public Color Color { get; set; }
     }
 
     public enum CashFlowType {  Przychody = 1, Koszty = 2}
