@@ -38,6 +38,12 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         [ObservableProperty]
         private bool areAddButtonsVisible;
 
+        [ObservableProperty]
+        public bool isListVisible;
+
+        [ObservableProperty]
+        public bool isErrorVisible;
+
         public ControlPanelViewModel(IRemoteDatabaseConnectionService remoteDatabaseConnectionService, CashFlowMapper cashFlowMapper)
         {
             _remoteDatabaseConnectionService = remoteDatabaseConnectionService;

@@ -79,6 +79,7 @@
                 ItemsSource="{Binding Items}"
                 SelectionMode="None"
                 HasUnevenRows="True"
+                IsVisible="{Binding IsListVisible}"
                 SeparatorVisibility="None">
     
                 <ListView.ItemTemplate>
@@ -107,8 +108,13 @@
             </ListView>
     
         </ScrollView>
-
-        <VerticalStackLayout
+        <Label Text="Brak środków na koncie"
+               IsVisible="{Binding IsErrorVisible}"/>
+        <ImageButton
+            Source="plus.svg"
+            HeightRequest="70"
+            WidthRequest="70"
+            Margin="0, 0, 15, 15"
             HorizontalOptions="End"
             VerticalOptions="End">
 
