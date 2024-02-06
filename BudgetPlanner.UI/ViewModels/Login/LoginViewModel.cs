@@ -50,6 +50,7 @@ namespace BudgetPlanner.UI.ViewModels
                 Password = string.Empty;
             }
         }
+
         [RelayCommand]
         public async Task NavigateToRegistration() => await _navigationService.Navigate<RegisterFormPage>();
     }

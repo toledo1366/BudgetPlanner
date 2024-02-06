@@ -215,6 +215,10 @@
               "version": "[7.0.100-1.23211.1, )",
               "autoReferenced": true
             },
+            "SkiaSharp.Extended.UI.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-preview.86, )"
+            },
             "Xamarin.Android.Glide": {
               "target": "Package",
               "version": "[4.13.2.2, )",

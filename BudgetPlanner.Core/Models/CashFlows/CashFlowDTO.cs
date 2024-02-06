@@ -12,5 +12,7 @@ namespace BudgetPlanner.Core.Models.CashFlows
         public required double Price { get; set; }
         public required string Date { get; set; }
         public required int CashFlowType { get; set; }
+        public int? IncomeCategory { get; set; }
+        public int? ExpenseCategory { get; set; }
     }
 }
