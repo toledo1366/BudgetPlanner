@@ -17,11 +17,14 @@ namespace BudgetPlanner.UI.ViewModels.Main
         public MainViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
+
+            StartUp();
         }
 
-        [RelayCommand]
-        public async Task Navigate()
+        public async Task StartUp()
         {
+            await Task.Delay(2000);
+
             await _navigationService.Navigate<LoginPage>();
         }
     }

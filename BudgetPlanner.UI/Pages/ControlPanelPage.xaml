@@ -6,28 +6,160 @@
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
-    <VerticalStackLayout>
-        <ListView
-            ItemsSource="{Binding Items}"
-            MinimumHeightRequest="500"
-            SelectionMode="Single">
+
+    <Grid
+        Padding="10">
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+    
+        <HorizontalStackLayout
+            Grid.Row="1"
+            VerticalOptions="Start"
+            HorizontalOptions="Center">
+
+            <Border
+                WidthRequest="35"
+                HeightRequest="35"
+                Stroke="Black"
+                Padding="15, 0, 0, 0"
+                IsVisible="{Binding IsPreviousButtonVisible}"
+                StrokeThickness="1">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+
+                <ImageButton
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Margin="0, 0, 15, 0"
+                    Source="angle_left.png"
+                    IsVisible="{Binding IsPreviousButtonVisible}"
+                    Command="{Binding GetPreviousMonthCommand}"/>
+                </Border>
             
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type models:CashFlow}">
-                    <ViewCell>
-                        <StackLayout Orientation="Vertical" MinimumHeightRequest="300" BackgroundColor="Aqua">
-                            <Label Text="{Binding Name}"/>
-                            <Label Text="{Binding Price}"/>
-                            <Label Text="{Binding Date}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-        <Button
-            Text="Dodaj"
-            Command="{Binding AddEntityCommand}"
-            Margin="10"/>
-    </VerticalStackLayout>
+
+            <DatePicker
+                Format="MM.yyyy"
+                Date="{Binding CurrentDate}"
+                IsEnabled="False"
+                TextColor="Black"
+                FontSize="Title"
+                Margin="10, 0, 10, 0"/>
+
+            <Border
+                WidthRequest="35"
+                HeightRequest="35"
+                Stroke="Black"
+                Padding="0, 0, 15, 0"
+                IsVisible="{Binding IsNextButtonVisible}"
+                StrokeThickness="1">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+
+                <ImageButton
+                    HeightRequest="20"
+                    WidthRequest="20"
+                    Margin="15, 0, 0, 0"
+                    Source="angle_right.png"
+                    Command="{Binding GetNextMonthCommand}"/>
+                </Border>
+
+        </HorizontalStackLayout>
+    
+        <ScrollView
+            Grid.Row="2"
+            Margin="0,75,0,0">
+    
+            <ListView
+                ItemsSource="{Binding Items}"
+                SelectionMode="None"
+                HasUnevenRows="True"
+                SeparatorVisibility="None">
+    
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type models:CashFlow}">
+                        <ViewCell>
+                            <Border  
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                Margin="10">
+
+                                 <Border.StrokeShape>
+                                      <RoundRectangle CornerRadius="15"/>
+                                 </Border.StrokeShape>
+
+                                 <StackLayout Padding="10">
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Price}"/>
+                                    <Label Text="{Binding Date}"/>
+                                </StackLayout>
+                            </Border>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+    
+            </ListView>
+    
+        </ScrollView>
+
+        <VerticalStackLayout
+            HorizontalOptions="End"
+            VerticalOptions="End">
+
+            <Border
+                WidthRequest="55"
+                HeightRequest="55"
+                Stroke="Black"
+                BackgroundColor="White"
+                IsVisible="{Binding AreAddButtonsVisible}"
+                StrokeThickness="1"
+                Margin="0, 0, 15, 10">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+
+                <ImageButton
+                    Source="expense.png"
+                    HeightRequest="30"
+                    WidthRequest="30"/>
+            </Border>
+
+
+
+            <Border
+                WidthRequest="55"
+                HeightRequest="55"
+                Stroke="Black"
+                BackgroundColor="White"
+                IsVisible="{Binding AreAddButtonsVisible}"
+                StrokeThickness="1"
+                Margin="0, 0, 15, 10">
+
+                <Border.StrokeShape>
+                     <RoundRectangle CornerRadius="360"/>
+                </Border.StrokeShape>
+
+                <ImageButton
+                    Source="income.png"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    />
+            </Border>
+    
+            <ImageButton
+                Source="plus.png"
+                HeightRequest="70"
+                WidthRequest="70"
+                Margin="0, 0, 15, 15"
+                Command="{Binding OpenCashFlowTypeSelectorCommand}"/>
+
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

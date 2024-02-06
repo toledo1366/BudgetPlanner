@@ -6,12 +6,13 @@ using BudgetPlanner.UI.ViewModels.Main;
 using Microsoft.Extensions.Logging;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
-using Firebase.Auth.Repository;
 using BudgetPlanner.Auth.Services;
 using BudgetPlanner.Core.Services.Db;
 using BudgetPlanner.UI.Models.CashFlows;
 using BudgetPlanner.UI.ViewModels.RegisterForm;
 using BudgetPlanner.UI.ViewModels.CashFlowForm;
+using SkiaSharp.Views.Maui.Controls.Hosting;
+using Microsoft.Maui.Handlers;
 
 namespace BudgetPlanner.UI
 {
@@ -19,9 +20,12 @@ namespace BudgetPlanner.UI
     {
         public static MauiApp CreateMauiApp()
         {
+            ConfigureUiHandlers();
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp()
                 .RegisterFirebase()
                 .RegisterPages()
                 .RegisterCustomServices()
@@ -36,6 +40,7 @@ namespace BudgetPlanner.UI
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            
 
             return builder.Build();
         }
@@ -46,7 +51,7 @@ namespace BudgetPlanner.UI
             {
                 ApiKey = "AIzaSyDa4jRyBSw0WnZ7hCyxyID5hKt2PzW5yqI",
                 AuthDomain = "budgetplanner-7ec34.firebaseapp.com",
-                Providers = new Firebase.Auth.Providers.FirebaseAuthProvider[]
+                Providers = new FirebaseAuthProvider[]
                 {
                     new EmailProvider()
                 },
@@ -94,18 +99,12 @@ namespace BudgetPlanner.UI
             return builder;
         }
 
-        //private static CrossFirebaseSettings CreateCrossFirebaseSettings()
-        //{
-        //    return new CrossFirebaseSettings(
-        //        //isAnalyticsEnabled: true,
-        //        isAuthEnabled: true,
-        //        //isCloudMessagingEnabled: true,
-        //        //isDynamicLinksEnabled: true,
-        //        //isFirestoreEnabled: true,
-        //        //isFunctionsEnabled: true,
-        //        //isRemoteConfigEnabled: true,
-        //        //isStorageEnabled: true,
-        //        googleRequestIdToken: "1032501458090-7u266a5uevk6lospp7rvf4rdqdp1o6h6.apps.googleusercontent.com");
-        //}
+        private static void ConfigureUiHandlers()
+        {
+            EntryHandler.Mapper.AppendToMapping(nameof(Entry), (handler, view) =>
+            {
+                handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            });
+        }
     }
 }
