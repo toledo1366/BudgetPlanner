@@ -49,25 +49,10 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
             CashFlowType = type;
             Categories = new List<string>();
 
-            if(type == CashFlowType.Koszty)
-            {
-                foreach(int category in Enum.GetValues(typeof(ExpenseCategory)))
-                {
-                    var enumItem = Enum.GetName(typeof(ExpenseCategory), category);
-                    Categories.Add(enumItem);
-                }
-            }
-            else
-            {
-                foreach (int category in Enum.GetValues(typeof(IncomeCategory)))
-                {
-                    var enumItem = Enum.GetName(typeof(IncomeCategory), category);
-                    Categories.Add(enumItem);
-                }
-            }
-
             Title = CashFlowType == CashFlowType.Koszty ? "Dodaj koszt" : "Dodaj przychód";
             Date = DateTime.Today;
+
+            SetUpCategories();
         }
 
         [RelayCommand]
@@ -89,6 +74,25 @@ namespace BudgetPlanner.UI.ViewModels.CashFlowForm
 
             _navigationService.Navigate<ControlPanelPage>();
         }
-    }
 
+        private void SetUpCategories()
+        {
+            if (CashFlowType == CashFlowType.Koszty)
+            {
+                foreach (int category in Enum.GetValues(typeof(ExpenseCategory)))
+                {
+                    var enumItem = Enum.GetName(typeof(ExpenseCategory), category);
+                    Categories.Add(enumItem);
+                }
+            }
+            else
+            {
+                foreach (int category in Enum.GetValues(typeof(IncomeCategory)))
+                {
+                    var enumItem = Enum.GetName(typeof(IncomeCategory), category);
+                    Categories.Add(enumItem);
+                }
+            }
+        }
+    }
 }

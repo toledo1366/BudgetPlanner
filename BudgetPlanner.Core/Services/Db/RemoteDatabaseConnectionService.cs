@@ -16,7 +16,7 @@ namespace BudgetPlanner.Core.Services.Db
             _authorizationService = authorizationService;
         }
 
-        async Task<List<CashFlowDTO>> IRemoteDatabaseConnectionService.GetItems()
+        public async Task<List<CashFlowDTO>> GetItems()
         {
             List<CashFlowDTO> items = new List<CashFlowDTO>();
             string user = _authorizationService.Uid;
@@ -31,7 +31,7 @@ namespace BudgetPlanner.Core.Services.Db
             return items;
         }
 
-        void IRemoteDatabaseConnectionService.PostItem(CashFlowDTO cashFlowDTO)
+        public void PostItem(CashFlowDTO cashFlowDTO)
         {
             string user = _authorizationService.Uid;
 

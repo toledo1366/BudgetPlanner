@@ -15,6 +15,8 @@ using SkiaSharp.Views.Maui.Controls.Hosting;
 using Microsoft.Maui.Handlers;
 using Microcharts.Maui;
 using BudgetPlanner.UI.ViewModels.Chart;
+using BudgetPlanner.Core.Services.Login;
+using BudgetPlanner.Core.Services.SignUp;
 
 namespace BudgetPlanner.UI
 {
@@ -100,6 +102,8 @@ namespace BudgetPlanner.UI
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IServiceProvider, ServiceProvider>();
             builder.Services.AddSingleton<IRemoteDatabaseConnectionService, RemoteDatabaseConnectionService>();
+            builder.Services.AddSingleton<ILoginService, LoginService>();
+            builder.Services.AddSingleton<ISignUpService, SignUpService>();
 
             return builder;
         }

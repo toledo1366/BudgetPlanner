@@ -21,8 +21,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Services\Db\" />
+    <None Remove="Services\Login\" />
+    <None Remove="Services\SignUp\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\Db\" />
+    <Folder Include="Services\Login\" />
+    <Folder Include="Services\SignUp\" />
   </ItemGroup>
 </Project>

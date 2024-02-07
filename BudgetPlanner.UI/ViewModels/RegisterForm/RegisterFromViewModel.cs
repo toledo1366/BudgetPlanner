@@ -1,20 +1,15 @@
-﻿using BudgetPlanner.Auth.Services;
+﻿using BudgetPlanner.Core.Services.SignUp;
 using BudgetPlanner.UI.Pages;
 using BudgetPlanner.UI.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BudgetPlanner.UI.ViewModels.RegisterForm
 {
     public partial class RegisterFromViewModel:ObservableObject
     {
         readonly private INavigationService _navigationService;
-        readonly private IAuthorizationService _authorizationService;
+        readonly private ISignUpService _signUpService;
 
         [ObservableProperty]
         private string userName;
@@ -28,10 +23,10 @@ namespace BudgetPlanner.UI.ViewModels.RegisterForm
         [ObservableProperty]
         private string repeatedPassword;
 
-        public RegisterFromViewModel(INavigationService navigationService, IAuthorizationService authorizationService)
+        public RegisterFromViewModel(INavigationService navigationService, ISignUpService signUpService)
         {
             _navigationService = navigationService;
-            _authorizationService = authorizationService;
+            _signUpService = signUpService;
         }
 
         private bool CheckIfPasswordsAreSame()
@@ -47,30 +42,15 @@ namespace BudgetPlanner.UI.ViewModels.RegisterForm
         }
 
         [RelayCommand]
-        public async Task Register()
+        public void Register()
         {
             bool passwordsAreSame = CheckIfPasswordsAreSame();
+
             if (passwordsAreSame) 
             {
-                _authorizationService.AccountRegistration(UserName, Email, Password);           
-            }
-        }
-        bool IsValidEmail(string email)
-        {
-            var trimmedEmail = email.Trim();
+                _signUpService.SignUp(UserName, Email, Password);
 
-            if (trimmedEmail.EndsWith("."))
-            {
-                return false; // suggested by @TK-421
-            }
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == trimmedEmail;
-            }
-            catch
-            {
-                return false;
+                _navigationService.Navigate<LoginPage>();
             }
         }
     }

@@ -10,6 +10,6 @@ public partial class ControlPanelPage : ContentPage
 	{
         InitializeComponent();
 
-		BindingContext = vm;
-	}
+        BindingContext = vm;
+    }
 }
