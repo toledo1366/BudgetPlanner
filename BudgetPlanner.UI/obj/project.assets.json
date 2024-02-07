@@ -82,6 +82,22 @@
           }
         }
       },
+      "Microcharts.Maui/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -2317,6 +2333,22 @@
           }
         }
       },
+      "Microcharts.Maui/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -4533,6 +4565,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microcharts.Maui/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -6757,6 +6805,22 @@
           }
         }
       },
+      "Microcharts.Maui/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -8973,6 +9037,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microcharts.Maui/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Microcharts.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -11213,6 +11293,23 @@
         "lib/netstandard2.0/LiteDB.xml",
         "litedb.4.1.4.nupkg.sha512",
         "litedb.nuspec"
+      ]
+    },
+    "Microcharts.Maui/1.0.0": {
+      "sha512": "Q7FWgkWSA44vgg5N9Nd4KdwoMflcAPYZ7VHqnjetcWu2z4EUx/75OgVqDJeP9WDmHC+hU4BPOyhnPhkS4+1RBg==",
+      "type": "package",
+      "path": "microcharts.maui/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0-android31.0/Microcharts.Maui.dll",
+        "lib/net6.0-android31.0/Microcharts.Maui.xml",
+        "lib/net6.0-ios16.1/Microcharts.Maui.dll",
+        "lib/net6.0-maccatalyst16.1/Microcharts.Maui.dll",
+        "lib/net6.0-windows10.0.19041/Microcharts.Maui.dll",
+        "microcharts.maui.1.0.0.nupkg.sha512",
+        "microcharts.maui.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
@@ -14222,6 +14319,7 @@
       "BudgetPlanner.Core >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "FirebaseAuthentication.net >= 4.1.0",
+      "Microcharts.Maui >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
@@ -14296,6 +14394,10 @@
           "FirebaseAuthentication.net": {
             "target": "Package",
             "version": "[4.1.0, )"
+          },
+          "Microcharts.Maui": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "egi5KP+7Fo4qfVFfFbd8bKivBVlQZhr4oIBT4zR0eA5tdSD6lTAH/KiA9nGibCy0edKYCqw5NyepCUrZm55aDQ==",
+  "dgSpecHash": "w2t1OU1tscvRGXBF+juLexGKYdU3s0BIZOYPRoJULJykGBie+TzaA3Gr83iVV7/FqgmiKFe8AQCRYG8w2BNAvw==",
   "success": true,
   "projectFilePath": "/Users/damianszmulik/Desktop/Projekty/BudgetPlanner/BudgetPlanner/BudgetPlanner.UI/BudgetPlanner.UI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/damianszmulik/.nuget/packages/firebasedatabase.net/4.2.0/firebasedatabase.net.4.2.0.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/googlegson/2.9.1.1/googlegson.2.9.1.1.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/litedb/4.1.4/litedb.4.1.4.nupkg.sha512",
+    "/Users/damianszmulik/.nuget/packages/microcharts.maui/1.0.0/microcharts.maui.1.0.0.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "/Users/damianszmulik/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
