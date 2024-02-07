@@ -13,6 +13,8 @@ using BudgetPlanner.UI.ViewModels.RegisterForm;
 using BudgetPlanner.UI.ViewModels.CashFlowForm;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 using Microsoft.Maui.Handlers;
+using Microcharts.Maui;
+using BudgetPlanner.UI.ViewModels.Chart;
 
 namespace BudgetPlanner.UI
 {
@@ -26,6 +28,7 @@ namespace BudgetPlanner.UI
             builder
                 .UseMauiApp<App>()
                 .UseSkiaSharp()
+                .UseMicrocharts()
                 .RegisterFirebase()
                 .RegisterPages()
                 .RegisterCustomServices()
@@ -67,6 +70,7 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<ControlPanelViewModel>();
             builder.Services.AddTransient<RegisterFromViewModel>();
             builder.Services.AddTransient<CashFlowFormViewModel>();
+            builder.Services.AddTransient<ChartViewModel>();
 
             return builder;
         }
@@ -77,7 +81,8 @@ namespace BudgetPlanner.UI
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<ControlPanelPage>();
             builder.Services.AddTransient<RegisterFormPage>();
-            builder.Services.AddTransient<CashFlowFormPage>();
+            builder.Services.AddTransient<CashFlowFormPage>(); 
+            builder.Services.AddTransient<ChartPage>();
 
             return builder;
         }

@@ -73,12 +73,6 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
             {
                 IsPreviousButtonVisible = true;
             }
-
-            //if (CurrentDate.Month == DateTime.Now.Month)
-            //{
-            //    IsPreviousButtonVisible = true;
-            //    IsNextButtonVisible = false;
-            //}
         }
 
         async Task FetchItems()
@@ -144,6 +138,12 @@ namespace BudgetPlanner.UI.ViewModels.ControlPanel
         public void NavigateToFormAddExpense()
         {
             NavigateToForm(CashFlowType.Koszty);
+        }
+
+        [RelayCommand]
+        public void NavigateToChart()
+        {
+            _navigationService.Navigation.PushAsync(new ChartPage(new Chart.ChartViewModel(), Items.ToList()), true);
         }
 
         private void NavigateToForm(CashFlowType cashFlowType)
