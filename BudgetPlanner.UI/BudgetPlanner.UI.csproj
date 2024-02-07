@@ -72,6 +72,8 @@
 		<None Remove="Resources\Images\*" />
 		<None Remove="Resources\Splash\logo.png" />
 		<None Remove="ViewModels\Chart\" />
+		<None Remove="Services\" />
+		<None Remove="Services\Navigation\" />
 	</ItemGroup>
 	<ItemGroup>
 		<GoogleServicesJson Include="google-services.json" />
@@ -82,6 +84,8 @@
 			<DependentUpon>RegisterFormPage.xaml</DependentUpon>
 		</Compile>
 		<Folder Include="ViewModels\Chart\" />
+		<Folder Include="Services\" />
+		<Folder Include="Services\Navigation\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiSplashScreen Include="Resources\Splash\logo.png" Color="#ffffff" BaseSize="277,252" />

@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             NavigationPage.HasNavigationBar="True"
              NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
              x:Class="BudgetPlanner.UI.Pages.ControlPanelPage"
              xmlns:vm="clr-namespace:BudgetPlanner.UI.ViewModels.ControlPanel"
              xmlns:models="clr-namespace:BudgetPlanner.UI.Models.CashFlows"
              x:DataType="vm:ControlPanelViewModel">
 
-    <Grid
-        Padding="10">
+    <Grid>
     
         <Grid.RowDefinitions>
             <RowDefinition Height="3*" />
@@ -21,7 +20,8 @@
             HeightRequest="25"
             WidthRequest="25"
             VerticalOptions="Start"
-            HorizontalOptions="End"/>
+            HorizontalOptions="End"
+            Margin="0, 10, 10,0 "/>
     
         <HorizontalStackLayout
             Grid.Row="1"
@@ -105,8 +105,8 @@
 
                                  <StackLayout Padding="10">
                                     <Label Text="{Binding Name}"/>
-                                    <Label Text="{Binding Price}" TextColor="{Binding Color}"/>
-                                    <Label Text="{Binding Date}"/>
+                                    <Label Text="{Binding Price, StringFormat='{0:F2} zł'}" TextColor="{Binding Color}" />
+                                    <Label Text="{Binding Date, StringFormat='{0:dd.MM.yyyy}'}"/>
                                 </StackLayout>
                             </Border>
 

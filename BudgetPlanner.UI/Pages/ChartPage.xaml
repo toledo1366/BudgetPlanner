@@ -6,20 +6,19 @@
              NavigationPage.IconColor="Black">
 
     <VerticalStackLayout>
-        <Label
-        Text="Miesięczne zestawienie"
-        HorizontalOptions="CenterAndExpand"
-        Margin="0,30,0,100"
-        FontSize="Title"/>
+             <Label
+                Text="Miesięczne zestawienie"
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,30,0,100"
+                FontSize="Title"/>
 
-    <micro:ChartView
-        x:Name="chart"
-        VerticalOptions="Center"
-        HorizontalOptions="Center"
-        Background="White"
-        HeightRequest="400"
-        WidthRequest="400"
-        />
+            <micro:ChartView
+                x:Name="chart"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Background="White"
+                HeightRequest="400"
+                WidthRequest="400"/>
 
     </VerticalStackLayout>
 

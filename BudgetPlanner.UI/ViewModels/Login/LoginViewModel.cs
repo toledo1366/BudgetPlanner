@@ -1,6 +1,4 @@
-﻿
-
-using BudgetPlanner.Auth.Services;
+﻿using BudgetPlanner.Core.Services.Login;
 using BudgetPlanner.UI.Pages;
 using BudgetPlanner.UI.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -11,7 +9,7 @@ namespace BudgetPlanner.UI.ViewModels
     public partial class LoginViewModel : ObservableObject
     {
         readonly private INavigationService _navigationService;
-        readonly private IAuthorizationService _authorizationService;
+        readonly private ILoginService _loginService;
 
         [ObservableProperty]
         private string email;
@@ -25,10 +23,10 @@ namespace BudgetPlanner.UI.ViewModels
         [ObservableProperty]
         private string errorMessage;
 
-        public LoginViewModel(INavigationService navigationService, IAuthorizationService authorizationService)
+        public LoginViewModel(INavigationService navigationService, ILoginService loginService)
         {
             _navigationService = navigationService;
-            _authorizationService = authorizationService;
+            _loginService = loginService;
         }
 
         [RelayCommand]
@@ -36,7 +34,7 @@ namespace BudgetPlanner.UI.ViewModels
         {
             try
             {
-                bool isLogged = await _authorizationService.SignIn(Email, Password);
+                bool isLogged = await _loginService.SignIn(Email, Password);
 
                 if (isLogged)
                 {

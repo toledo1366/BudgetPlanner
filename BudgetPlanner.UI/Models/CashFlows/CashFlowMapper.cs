@@ -18,6 +18,8 @@ namespace BudgetPlanner.UI.Models.CashFlows
                 Date = DateTime.Parse(dto.Date),
                 CashFlowType = (CashFlowType)dto.CashFlowType,
                 Color = (CashFlowType)dto.CashFlowType == CashFlowType.Przychody ? Color.FromHex("#00ff00") : Color.FromHex("#ff0000"),
+                IncomeCategory = (IncomeCategory?)dto.IncomeCategory,
+                ExpenseCategory = (ExpenseCategory?)dto.ExpenseCategory
             };
         }
         
@@ -28,7 +30,9 @@ namespace BudgetPlanner.UI.Models.CashFlows
                 Name = model.Name,
                 Price = model.Price,
                 Date = model.Date.ToString(),
-                CashFlowType = (int)model.CashFlowType
+                CashFlowType = (int)model.CashFlowType,
+                IncomeCategory = (int)model.IncomeCategory,
+                ExpenseCategory = (int)model.ExpenseCategory
             };
         }
     }

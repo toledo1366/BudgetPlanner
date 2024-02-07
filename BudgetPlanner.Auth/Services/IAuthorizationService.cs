@@ -7,6 +7,5 @@ namespace BudgetPlanner.Auth.Services
 		public void AccountRegistration(string username, string email, string password);
 		string Uid { get; }
 		public Task<bool> SignIn(string email, string password);
-		void LogoutFromGoogleSource();
     }
 }

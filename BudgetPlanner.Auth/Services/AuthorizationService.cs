@@ -30,12 +30,7 @@ namespace BudgetPlanner.Auth.Services
             return true;
         }
 
-        void IAuthorizationService.LogoutFromGoogleSource()
-        {
-            _firebaseAuthGoogle.SignOut();
-        }
-
-        async void IAuthorizationService.AccountRegistration(string username, string email, string password)
+        public async void AccountRegistration(string username, string email, string password)
         {
             try
             {
